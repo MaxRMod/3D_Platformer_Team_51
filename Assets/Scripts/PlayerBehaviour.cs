@@ -1,0 +1,186 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(Rigidbody))]
+public class PlayerBehaviour : MonoBehaviour
+{
+
+    public MoveSettings moveSettings;
+    public InputSettings inputSettings;
+    public Transform spawnPoint;
+
+    private Rigidbody playerRigidbody;
+    private Vector3 velocity;
+    private Quaternion targetRotation;
+    private float forwardInput,sidewaysInput,turnInput,jumpInput;
+    
+    Rigidbody platformRigidbody;
+    bool isOnPlatform=false;
+
+
+    bool IsGrounded(){
+        return Physics.Raycast(transform.position,Vector3.down,moveSettings.distanceToGround,moveSettings.ground);
+    }
+
+
+    void Awake(){
+
+        Spawn();
+        velocity=Vector3.zero;
+        forwardInput=sidewaysInput=turnInput=jumpInput=0;
+        targetRotation=transform.rotation;
+        playerRigidbody=gameObject.GetComponent<Rigidbody>();
+
+
+    }
+    void Update(){
+
+        GetInput();
+        Turn();
+
+        
+    }
+
+
+    void JumpedOnEnemy(float bumpSpeed){
+
+        playerRigidbody.velocity=new Vector3(playerRigidbody.velocity.x,bumpSpeed,playerRigidbody.velocity.z);
+    }
+
+    void OnCollisionEnter(Collision collision){
+
+        if(collision.gameObject.CompareTag("Enemy")){
+                Enemy enemy=collision.gameObject.GetComponent<Enemy>();
+                Collider col=collision.gameObject.GetComponent<Collider>();
+                Collider mycol=this.gameObject.GetComponent<Collider>();
+
+               
+               //TODO
+               //Nochmal PDF angucken und Code überarbeiten, sonst gibt es hier ein Problem  mit bumpSpeed
+               /* if(enemy.invincible){
+
+                    OnDeath();
+                }
+                else if(mycol.bounds.center.y-mycol.bounds.extents.y>col.bounds.center.y+0.5f*col.bounds.extents.y){
+
+                    GameData.Instance.Score+=10;
+                    JumpedOnEnemy(enemy.bumpSpeed);
+                    enemy.OnDeath();
+
+
+                }
+                else{
+                    OnDeath();
+                }
+                */
+
+        }
+
+        if(collision.gameObject.CompareTag("MovingPlatform")){
+            //transform.parent
+            platformRigidbody=collision.gameObject.GetComponent<Rigidbody>();
+            isOnPlatform=true;
+        }
+    }
+
+    void OnTriggerEnter(Collider other){
+
+        if(other.CompareTag("DeathZone")){
+            Spawn();           
+        }
+
+    }
+
+    void Spawn(){
+
+        transform.position=spawnPoint.position;
+    }
+
+    public void OnDeath(){
+
+        Spawn();
+    }
+
+    void StopMovingWithPlatform(Collision collisionExit){
+
+        
+        if(collisionExit.gameObject.tag=="MovingPlatform"){
+            platformRigidbody=null;
+            isOnPlatform=false;
+        }
+    }
+
+
+    void FixedUpdate(){
+
+        
+        Run();
+        Jump();
+       
+
+    }
+    void GetInput(){
+
+        if(inputSettings.FORWARD_AXIS.Length!=0)
+        forwardInput=Input.GetAxis(inputSettings.FORWARD_AXIS);
+
+        if(inputSettings.SIDEWAYS_AXIS.Length!=0)
+        sidewaysInput=Input.GetAxis(inputSettings.SIDEWAYS_AXIS);
+
+        if(inputSettings.TURN_AXIS.Length!=0)
+        turnInput=Input.GetAxis(inputSettings.TURN_AXIS);
+
+        if(inputSettings.JUMP_AXIS.Length!=0)
+        jumpInput=Input.GetAxis(inputSettings.JUMP_AXIS);
+
+    }
+    void Run(){
+            velocity.z=forwardInput*moveSettings.runVelocity;
+            velocity.x=sidewaysInput*moveSettings.runVelocity;
+            velocity.y=playerRigidbody.velocity.y;
+        //if(isOnPlatform){
+          //  playerRigidbody.velocity+=platformRigidbody.velocity;
+           // }     
+
+            playerRigidbody.velocity=transform.TransformDirection(velocity);
+    }
+
+
+    void Turn(){
+    if(Mathf.Abs(turnInput)>0){
+        targetRotation*=Quaternion.AngleAxis(moveSettings.rotateVelocity*turnInput*Time.deltaTime,Vector3.up);
+    }
+    transform .rotation=targetRotation;
+    }
+
+
+    void Jump(){
+            if(jumpInput!=0&&IsGrounded()){
+
+                playerRigidbody.velocity=new Vector3(playerRigidbody.velocity.x,moveSettings.jumpVelocity,playerRigidbody.velocity.z);
+            }
+
+
+    }
+}
+
+[System.Serializable]
+public class MoveSettings{
+
+    public float runVelocity=12;
+    public float rotateVelocity=100;
+    public float jumpVelocity=8;
+    public float distanceToGround=1.3f;
+    public LayerMask ground; 
+
+}
+[System.Serializable]
+public class InputSettings{
+    public string FORWARD_AXIS="Vertical"; 
+    public string SIDEWAYS_AXIS="Horizontal";
+    public string TURN_AXIS="Mouse X";
+    public string JUMP_AXIS="Jump";
+
+
+}
