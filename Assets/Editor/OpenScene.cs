@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEditor;
+using UnityEditor.SceneManagement;
 public class OpenScene : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    [MenuItem("OpenScene/StartScreen")]
+    static void StartScreen()
     {
-        
-    }
+        EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo();
+        EditorSceneManager.OpenScene("Assets/Scenes/StartScreen.unity");
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

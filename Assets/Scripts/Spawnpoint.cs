@@ -5,14 +5,13 @@ using UnityEngine;
 public class Spawnpoint : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
+   
+    void OnDrawGizmos(){
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Gizmos.DrawIcon(gameObject.transform.position,"spawnpoint");
     }
+   
+   
+    
 }

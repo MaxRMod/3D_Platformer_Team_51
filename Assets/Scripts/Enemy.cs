@@ -5,6 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float speed=2;
+    public bool invincible=false;
+    public float bumpSpeed=10;
     private Rigidbody enemyrigidbody;
 
     public void Awake(){
@@ -20,6 +22,11 @@ public class Enemy : MonoBehaviour
     public void OnTriggerEnter(Collider other){
         if(other.CompareTag("End"))
         speed *= -1;
+    }
+
+    public void OnDeath(){
+
+        gameObject.GetComponent<Collider>().enabled=false;
     }
 
 }

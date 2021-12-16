@@ -11,7 +11,16 @@ public class MovingPlaform : MonoBehaviour
 
  private Transform currentStart;
  private Transform currentTarget;
+
 private float distance=0f;
+
+
+
+
+
+
+
+
 
 
     // Start is called before the first frame update
