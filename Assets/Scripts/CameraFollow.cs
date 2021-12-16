@@ -9,7 +9,9 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private float distanceUp;
     [SerializeField] private float smooth;
     [SerializeField] private Transform followedObject;
+
     private Vector3 toPosition;
+    
 
     void LateUpdate(){
 
@@ -17,4 +19,10 @@ public class CameraFollow : MonoBehaviour
         transform.position=Vector3.Lerp(transform.position,toPosition,Time.deltaTime*smooth);
         transform.LookAt(followedObject);
     }
+
+
+
+    
 }
+
+
