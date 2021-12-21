@@ -8,7 +8,7 @@ public class Spawnpoint : MonoBehaviour
    
    
     void OnDrawGizmos(){
-
+        //comment
         Gizmos.DrawIcon(gameObject.transform.position,"spawnpoint");
     }
    
