@@ -22,7 +22,7 @@ public class AdvancedEnemy : MonoBehaviour
     private Rigidbody enemyRigidbody;
 
     [SerializeField] 
-    private List<transform> wayPoints;
+    private List<Transform> wayPoints;
     private int currentWayPoint = 0;
     [SerializeField] 
     private float distanceThreshold;
@@ -84,7 +84,7 @@ public class AdvancedEnemy : MonoBehaviour
     }
 
 
-    private void ChaseLineOfSight(Vector3 targetPosition, float speed) {
+    private void ChaseLineOfSight(Vector3 targetPosition, float Speed) {
         Vector3 direction = targetPosition - transform.position;
         direction.Normalize();
 
@@ -111,7 +111,7 @@ public class AdvancedEnemy : MonoBehaviour
     private void PatternMovement() {
         ChaseLineOfSight(wayPoints[currentWayPoint].position, NormalSpeed);
 
-        if (Vector3.Distance(gameObject.transform.position, wayPoints[currentWayPoint].position < distanceThreshold) {
+        if (Vector3.Distance(gameObject.transform.position, wayPoints[currentWayPoint].position) < distanceThreshold) {
             currentWayPoint = (currentWayPoint + 1) % wayPoints.Count;
         }
     }
