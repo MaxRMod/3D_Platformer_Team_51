@@ -84,14 +84,6 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other){
-
-        if(other.CompareTag("DeathZone")){
-            Spawn();           
-        }
-
-    }
-
     void Spawn(){
 
         transform.position=spawnPoint.position;
@@ -163,6 +155,21 @@ public class PlayerBehaviour : MonoBehaviour
 
 
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+
+        if (other.CompareTag("DeathZone"))
+        {
+            Spawn();
+        }
+
+        if (other.CompareTag("Checkpoint"))
+        {
+            spawnPoint = other.gameObject.transform;
+        }
+
+    }
 }
 
 [System.Serializable]
@@ -176,11 +183,10 @@ public class MoveSettings{
 
 }
 [System.Serializable]
-public class InputSettings{
-    public string FORWARD_AXIS="Vertical"; 
-    public string SIDEWAYS_AXIS="Horizontal";
-    public string TURN_AXIS="Mouse X";
-    public string JUMP_AXIS="Jump";
-
-
+public class InputSettings
+{
+    public string FORWARD_AXIS = "Vertical";
+    public string SIDEWAYS_AXIS = "Horizontal";
+    public string TURN_AXIS = "Mouse X";
+    public string JUMP_AXIS = "Jump";
 }

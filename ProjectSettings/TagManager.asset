@@ -6,8 +6,10 @@ TagManager:
   tags:
   - MovingPlatform
   - DeathZone
-  - spawnpoint
   - End
+  - Checkpoint
+  - Enemy
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX
