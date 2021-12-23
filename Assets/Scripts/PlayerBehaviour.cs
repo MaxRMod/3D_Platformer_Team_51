@@ -5,43 +5,104 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerBehaviour : MonoBehaviour
 {
-
+    //Variables of both Settings classes
     public MoveSettings moveSettings;
     public InputSettings inputSettings;
-    public Transform spawnPoint;
 
+    [SerializeField] private Transform spawnPoint;
     private Rigidbody playerRigidbody;
     private Vector3 velocity;
     private Quaternion targetRotation;
-    private float forwardInput,sidewaysInput,turnInput,jumpInput;
-    
+    private float forwardInput, sidewaysInput, turnInput, jumpInput;
+    private Vector3 initialScale;
+
     Rigidbody platformRigidbody;
-    bool isOnPlatform=false;
+    bool isOnPlatform = false;
 
-
-    bool IsGrounded(){
-        return Physics.Raycast(transform.position,Vector3.down,moveSettings.distanceToGround,moveSettings.ground);
-    }
-
-
-    void Awake(){
-
+    //Set all starting values
+    void Awake()
+    {
         Spawn();
-        velocity=Vector3.zero;
-        forwardInput=sidewaysInput=turnInput=jumpInput=0;
-        targetRotation=transform.rotation;
-        playerRigidbody=gameObject.GetComponent<Rigidbody>();
-
-
+        velocity = Vector3.zero;
+        forwardInput = sidewaysInput = turnInput = jumpInput = 0;
+        targetRotation = transform.rotation;
+        playerRigidbody = gameObject.GetComponent<Rigidbody>();
     }
-    void Update(){
 
+    //Called every frame
+    void Update()
+    {
         GetInput();
         Turn();
-
-        
     }
 
+    //Called every timestep
+    void FixedUpdate()
+    {
+        Run();
+        Jump();
+    }
+
+    #region PlayerMovement
+    //Saves user input
+    void GetInput()
+    {
+        if (inputSettings.FORWARD_AXIS.Length != 0)
+        {
+            forwardInput = Input.GetAxis(inputSettings.FORWARD_AXIS);
+        }
+        if (inputSettings.SIDEWAYS_AXIS.Length != 0)
+        { 
+            sidewaysInput = Input.GetAxis(inputSettings.SIDEWAYS_AXIS);
+        }
+        if (inputSettings.TURN_AXIS.Length != 0)
+        {
+            turnInput = Input.GetAxis(inputSettings.TURN_AXIS);
+        }
+        if (inputSettings.JUMP_AXIS.Length != 0)
+        { 
+            jumpInput = Input.GetAxis(inputSettings.JUMP_AXIS);
+        }
+    }
+
+    void Run()
+    {
+        velocity.z = forwardInput * moveSettings.runVelocity;
+        velocity.x = sidewaysInput * moveSettings.runVelocity;
+        velocity.y = playerRigidbody.velocity.y;
+        //if(isOnPlatform){
+        //  playerRigidbody.velocity+=platformRigidbody.velocity;
+        // }     
+
+        playerRigidbody.velocity = transform.TransformDirection(velocity);
+    }
+
+    void Turn()
+    {
+        if (Mathf.Abs(turnInput) > 0)
+        {
+            targetRotation *= Quaternion.AngleAxis(moveSettings.rotateVelocity * turnInput * Time.deltaTime, Vector3.up);
+        }
+        transform.rotation = targetRotation;
+    }
+
+
+    void Jump()
+    {
+        if (jumpInput != 0 && IsGrounded())
+        {
+
+            playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, moveSettings.jumpVelocity, playerRigidbody.velocity.z);
+        }
+
+
+    }
+
+    bool IsGrounded()
+    {
+        return Physics.Raycast(transform.position, Vector3.down, moveSettings.distanceToGround, moveSettings.ground);
+    }
+    #endregion
 
     void JumpedOnEnemy(float bumpSpeed){
 
@@ -58,23 +119,21 @@ public class PlayerBehaviour : MonoBehaviour
                
                //TODO
                //Nochmal PDF angucken und Code überarbeiten, sonst gibt es hier ein Problem  mit bumpSpeed
-               /* if(enemy.invincible){
-
+               /* if(enemy.invincible)
+                {
                     OnDeath();
                 }
-                else if(mycol.bounds.center.y-mycol.bounds.extents.y>col.bounds.center.y+0.5f*col.bounds.extents.y){
-
+                else if(mycol.bounds.center.y-mycol.bounds.extents.y>col.bounds.center.y+0.5f*col.bounds.extents.y)
+                {
                     GameData.Instance.Score+=10;
                     JumpedOnEnemy(enemy.bumpSpeed);
                     enemy.OnDeath();
-
-
                 }
-                else{
+                else
+                {
                     OnDeath();
                 }
                 */
-
         }
 
         if(collision.gameObject.CompareTag("MovingPlatform")){
@@ -103,58 +162,10 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-
-    void FixedUpdate(){
-
-        
-        Run();
-        Jump();
-       
-
-    }
-    void GetInput(){
-
-        if(inputSettings.FORWARD_AXIS.Length!=0)
-        forwardInput=Input.GetAxis(inputSettings.FORWARD_AXIS);
-
-        if(inputSettings.SIDEWAYS_AXIS.Length!=0)
-        sidewaysInput=Input.GetAxis(inputSettings.SIDEWAYS_AXIS);
-
-        if(inputSettings.TURN_AXIS.Length!=0)
-        turnInput=Input.GetAxis(inputSettings.TURN_AXIS);
-
-        if(inputSettings.JUMP_AXIS.Length!=0)
-        jumpInput=Input.GetAxis(inputSettings.JUMP_AXIS);
-
-    }
-    void Run(){
-            velocity.z=forwardInput*moveSettings.runVelocity;
-            velocity.x=sidewaysInput*moveSettings.runVelocity;
-            velocity.y=playerRigidbody.velocity.y;
-        //if(isOnPlatform){
-          //  playerRigidbody.velocity+=platformRigidbody.velocity;
-           // }     
-
-            playerRigidbody.velocity=transform.TransformDirection(velocity);
-    }
+    
 
 
-    void Turn(){
-    if(Mathf.Abs(turnInput)>0){
-        targetRotation*=Quaternion.AngleAxis(moveSettings.rotateVelocity*turnInput*Time.deltaTime,Vector3.up);
-    }
-    transform .rotation=targetRotation;
-    }
-
-
-    void Jump(){
-            if(jumpInput!=0&&IsGrounded()){
-
-                playerRigidbody.velocity=new Vector3(playerRigidbody.velocity.x,moveSettings.jumpVelocity,playerRigidbody.velocity.z);
-            }
-
-
-    }
+    
 
     void OnTriggerEnter(Collider other)
     {
@@ -175,10 +186,10 @@ public class PlayerBehaviour : MonoBehaviour
 [System.Serializable]
 public class MoveSettings{
 
-    public float runVelocity=12;
-    public float rotateVelocity=100;
-    public float jumpVelocity=8;
-    public float distanceToGround=1.3f;
+    public float runVelocity = 12;
+    public float rotateVelocity = 100;
+    public float jumpVelocity = 8;
+    public float distanceToGround = 1.3f;
     public LayerMask ground; 
 
 }
