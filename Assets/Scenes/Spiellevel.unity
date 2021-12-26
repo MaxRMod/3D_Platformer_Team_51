@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ImmovableObstacle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 640282895117184214, guid: 7cc7d38879b23884399adc6ec0dd8360, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 5570555664412680139, guid: 7cc7d38879b23884399adc6ec0dd8360, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -223,7 +227,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &159677742
 MonoBehaviour:
@@ -369,7 +373,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -575,7 +579,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &720812786
 MonoBehaviour:
@@ -608,7 +612,7 @@ GameObject:
   - component: {fileID: 752820335}
   m_Layer: 2
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -639,6 +643,7 @@ MonoBehaviour:
     TURN_AXIS: Mouse X
     JUMP_AXIS: Jump
   spawnPoint: {fileID: 1933314958}
+  MaxJumps: 2
 --- !u!54 &752820336
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -730,7 +735,7 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -843,6 +848,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Gro\xDFe Plattform (1)"
       objectReference: {fileID: 0}
+    - target: {fileID: 515202586695401649, guid: 87d05c5c7aabc9a4db04d9df6933d4cb, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 5984427412382245938, guid: 87d05c5c7aabc9a4db04d9df6933d4cb, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -918,7 +927,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1165933353
 BoxCollider:
@@ -1018,6 +1027,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingObstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 8631553216508023419, guid: e3cba9d55780dac4eb9df1ade01b4c58, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3cba9d55780dac4eb9df1ade01b4c58, type: 3}
 --- !u!1001 &1644918146
@@ -1030,6 +1043,10 @@ PrefabInstance:
     - target: {fileID: 4507699583885197971, guid: 0ca2962c2f8cff74fa7a15333b74487c, type: 3}
       propertyPath: m_Name
       value: Rampe (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4507699583885197971, guid: 0ca2962c2f8cff74fa7a15333b74487c, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9065959698277431058, guid: 0ca2962c2f8cff74fa7a15333b74487c, type: 3}
       propertyPath: m_RootOrder
@@ -1153,6 +1170,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ImmovableObstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 640282895117184214, guid: 7cc7d38879b23884399adc6ec0dd8360, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 5570555664412680139, guid: 7cc7d38879b23884399adc6ec0dd8360, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1228,7 +1249,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1933314959
 MonoBehaviour:
@@ -1318,6 +1339,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rampe
       objectReference: {fileID: 0}
+    - target: {fileID: 4507699583885197971, guid: 0ca2962c2f8cff74fa7a15333b74487c, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 9065959698277431058, guid: 0ca2962c2f8cff74fa7a15333b74487c, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1374,6 +1399,10 @@ PrefabInstance:
     - target: {fileID: 515202586695401649, guid: 87d05c5c7aabc9a4db04d9df6933d4cb, type: 3}
       propertyPath: m_Name
       value: "Gro\xDFe Plattform"
+      objectReference: {fileID: 0}
+    - target: {fileID: 515202586695401649, guid: 87d05c5c7aabc9a4db04d9df6933d4cb, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 5984427412382245938, guid: 87d05c5c7aabc9a4db04d9df6933d4cb, type: 3}
       propertyPath: m_RootOrder
@@ -1472,9 +1501,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1217192715386443809, guid: e926f1544ba6b8d43bfabab5f269258f, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 1356532413571156484, guid: e926f1544ba6b8d43bfabab5f269258f, type: 3}
       propertyPath: m_Name
       value: Curve
+      objectReference: {fileID: 0}
+    - target: {fileID: 1356532413571156484, guid: e926f1544ba6b8d43bfabab5f269258f, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414073312551720721, guid: e926f1544ba6b8d43bfabab5f269258f, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542149719492994704, guid: e926f1544ba6b8d43bfabab5f269258f, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503102591877471714, guid: e926f1544ba6b8d43bfabab5f269258f, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e926f1544ba6b8d43bfabab5f269258f, type: 3}

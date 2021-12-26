@@ -16,6 +16,10 @@ public class PlayerBehaviour : MonoBehaviour
     private float forwardInput, sidewaysInput, turnInput, jumpInput;
     private Vector3 initialScale;
 
+    //Jump-variables
+    private int JumpCount = 0;
+    [SerializeField] private int MaxJumps = 2; //Maximum amount of jumps
+
     Rigidbody platformRigidbody;
     bool isOnPlatform = false;
 
@@ -29,18 +33,29 @@ public class PlayerBehaviour : MonoBehaviour
         playerRigidbody = gameObject.GetComponent<Rigidbody>();
     }
 
+    private void Start()
+    {
+        JumpCount = MaxJumps;
+    }
+
     //Called every frame
     void Update()
     {
-        GetInput();
         Turn();
+        GetInput();
     }
 
     //Called every timestep
     void FixedUpdate()
     {
         Run();
-        Jump();
+        if (Input.GetButton("Jump"))
+        {
+            if (JumpCount > 0)
+            {
+                Jump();
+            }
+        }
     }
 
     #region PlayerMovement
@@ -91,8 +106,8 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (jumpInput != 0 && IsGrounded())
         {
-
             playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, moveSettings.jumpVelocity, playerRigidbody.velocity.z);
+            JumpCount -= 1;
         }
 
 
@@ -140,6 +155,11 @@ public class PlayerBehaviour : MonoBehaviour
             //transform.parent
             platformRigidbody=collision.gameObject.GetComponent<Rigidbody>();
             isOnPlatform=true;
+        }
+
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("MovingPlatform"))
+        {
+            JumpCount = MaxJumps;
         }
     }
 
