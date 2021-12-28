@@ -14,6 +14,9 @@ public class MovingPlaform : MonoBehaviour
 
 private float distance=0f;
 
+[SerializeField] bool smthIsOnPlatform=false;
+[SerializeField] GameObject currentlyOnPlatform=null;
+private Vector3 offset;
 
 
 
@@ -48,4 +51,30 @@ private float distance=0f;
 
 
     }
+    void LateUpdate(){
+        if(smthIsOnPlatform){
+            //currentlyOnPlatform.transform.position=transform.position+offset;
+        }
+
+    }
+    void OnTriggerEnter(Collider other){
+        if(other.gameObject.tag=="Player"){
+                other.transform.parent=transform;
+                currentlyOnPlatform=other.gameObject;
+                smthIsOnPlatform=true;
+                offset=other.transform.position-transform.position;
+        }
+    }
+
+    void OnTriggerExit(Collider colliderExit){
+            
+        if(colliderExit.gameObject.tag=="Player"){
+                colliderExit.transform.parent=null;
+        }
+            currentlyOnPlatform=null;
+            smthIsOnPlatform=false;
+        
+    }
+
+
 }
