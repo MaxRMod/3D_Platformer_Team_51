@@ -82,14 +82,22 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Run()
     {
-        velocity.z = forwardInput * moveSettings.runVelocity;
-        velocity.x = sidewaysInput * moveSettings.runVelocity;
-        velocity.y = playerRigidbody.velocity.y;
+       if(!IsGrounded()){
+            
+            velocity.x=playerRigidbody.velocity.x;
+            velocity.y=playerRigidbody.velocity.y;
+            velocity.z=playerRigidbody.velocity.z;
         //if(isOnPlatform){
         //  playerRigidbody.velocity+=platformRigidbody.velocity;
         // }     
-
-        playerRigidbody.velocity = transform.TransformDirection(velocity);
+           playerRigidbody.velocity = transform.TransformDirection(velocity);
+        }
+        else{
+            velocity.y = playerRigidbody.velocity.y;
+            velocity.z = forwardInput * moveSettings.runVelocity;
+            velocity.x = sidewaysInput * moveSettings.runVelocity;
+            playerRigidbody.velocity = transform.TransformDirection(velocity);
+        }
     }
 
     void Turn()
