@@ -24,6 +24,11 @@ public class PlayerBehaviour : MonoBehaviour
     Rigidbody platformRigidbody;
     bool isOnPlatform = false;
 
+    //SpeedBoost variables
+    private float speedBoostTimer;
+    private bool speedBoosted;
+
+
     //Set all starting values
     void Awake()
     {
@@ -36,6 +41,8 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void Start()
     {
+        speedBoosted = false;
+        speedBoostTimer = 0;
         JumpCount = MaxJumps;
     }
 
@@ -47,6 +54,19 @@ public class PlayerBehaviour : MonoBehaviour
         }
         Turn();
         GetInput();
+
+        if (speedBoosted)
+        {
+        
+            speedBoostTimer += Time.deltaTime;
+            if (speedBoostTimer >= 3)
+            {
+                moveSettings.runVelocity /= 2;
+                speedBoostTimer = 0;
+                speedBoosted = false;
+            }
+            
+        }
     }
 
     //Called every timestep
@@ -210,6 +230,13 @@ public class PlayerBehaviour : MonoBehaviour
         if (other.CompareTag("Checkpoint"))
         {
             spawnPoint = other.gameObject.transform;
+        }
+
+        if (other.CompareTag("SpeedBoost"))
+        {
+            speedBoosted = true;
+            moveSettings.runVelocity *= 2;
+            Destroy(other.gameObject);
         }
 
     }
