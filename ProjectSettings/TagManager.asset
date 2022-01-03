@@ -12,6 +12,7 @@ TagManager:
   - SpawnPoint
   - Ground
   - SpeedBoost
+  - JumpBoost
   layers:
   - Default
   - TransparentFX

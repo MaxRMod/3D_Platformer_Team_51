@@ -28,6 +28,9 @@ public class PlayerBehaviour : MonoBehaviour
     private float speedBoostTimer;
     private bool speedBoosted;
 
+    //JumpBoost variables
+    private float jumpBoostTimer;
+    private bool jumpBoosted;
 
     //Set all starting values
     void Awake()
@@ -42,6 +45,8 @@ public class PlayerBehaviour : MonoBehaviour
     private void Start()
     {
         speedBoosted = false;
+        speedBoostTimer = 0;
+        jumpBoosted = false;
         speedBoostTimer = 0;
         JumpCount = MaxJumps;
     }
@@ -64,6 +69,19 @@ public class PlayerBehaviour : MonoBehaviour
                 moveSettings.runVelocity /= 2;
                 speedBoostTimer = 0;
                 speedBoosted = false;
+            }
+            
+        }
+
+        if (jumpBoosted)
+        {
+        
+            jumpBoostTimer += Time.deltaTime;
+            if (jumpBoostTimer >= 3)
+            {
+                moveSettings.jumpVelocity /= 2;
+                jumpBoostTimer = 0;
+                jumpBoosted = false;
             }
             
         }
@@ -236,6 +254,13 @@ public class PlayerBehaviour : MonoBehaviour
         {
             speedBoosted = true;
             moveSettings.runVelocity *= 2;
+            Destroy(other.gameObject);
+        }
+
+        if (other.CompareTag("JumpBoost"))
+        {
+            jumpBoosted = true;
+            moveSettings.jumpVelocity *= 2;
             Destroy(other.gameObject);
         }
 
