@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerBehaviour : MonoBehaviour
@@ -32,6 +33,11 @@ public class PlayerBehaviour : MonoBehaviour
     private float jumpBoostTimer;
     private bool jumpBoosted;
 
+    //Collectibles
+    private int collectibleCounter;
+
+    public Text collectibleText;
+
     //Set all starting values
     void Awake()
     {
@@ -49,6 +55,7 @@ public class PlayerBehaviour : MonoBehaviour
         jumpBoosted = false;
         speedBoostTimer = 0;
         JumpCount = MaxJumps;
+        collectibleCounter = 0;
     }
 
     //Called every frame
@@ -263,6 +270,15 @@ public class PlayerBehaviour : MonoBehaviour
             moveSettings.jumpVelocity *= 2;
             Destroy(other.gameObject);
         }
+
+        if (other.CompareTag("Collectible"))
+        {
+            collectibleCounter++;
+            collectibleText.text = "Coins: " + collectibleCounter;
+            Destroy(other.gameObject);
+        }
+        
+    
 
     }
 }
