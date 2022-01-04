@@ -33,10 +33,12 @@ public class PlayerBehaviour : MonoBehaviour
     private float jumpBoostTimer;
     private bool jumpBoosted;
 
-    //Collectibles
+    //Collectible variables
     private int collectibleCounter;
-
     public Text collectibleText;
+
+    //KeyItem variables
+    private bool hasKey;
 
     //Set all starting values
     void Awake()
@@ -279,6 +281,11 @@ public class PlayerBehaviour : MonoBehaviour
         }
         
     
+        if (other.CompareTag("Key"))
+        {
+            hasKey = true;
+            Destroy(other.gameObject);
+        }
 
     }
 }
