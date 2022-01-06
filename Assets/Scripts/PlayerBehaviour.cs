@@ -40,6 +40,9 @@ public class PlayerBehaviour : MonoBehaviour
     //KeyItem variables
     private bool hasKey;
 
+    //Portal variables
+    private Transform portalSpawnPoint;
+
     //Set all starting values
     void Awake()
     {
@@ -285,6 +288,10 @@ public class PlayerBehaviour : MonoBehaviour
         {
             hasKey = true;
             Destroy(other.gameObject);
+        }
+
+        if (other.CompareTag("Portal1")) {
+            portalSpawnPoint=other.gameObject.transform;
         }
 
     }
