@@ -61,6 +61,7 @@ public class PlayerBehaviour : MonoBehaviour
         speedBoostTimer = 0;
         JumpCount = MaxJumps;
         collectibleCounter = 0;
+        collectibleText = GameObject.Find("collectibleText").GetComponent<Text>();
     }
 
     //Called every frame
@@ -288,10 +289,6 @@ public class PlayerBehaviour : MonoBehaviour
         {
             hasKey = true;
             Destroy(other.gameObject);
-        }
-
-        if (other.CompareTag("Portal1")) {
-            portalSpawnPoint=other.gameObject.transform;
         }
 
     }

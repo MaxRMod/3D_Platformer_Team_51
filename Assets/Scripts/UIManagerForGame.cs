@@ -40,11 +40,12 @@ public class UIManagerForGame : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Escape)&&!isPaused)
         {
-                Time.timeScale=0;
-                pausePanel.SetActive(true);
-                isPaused=true;
-
+            Time.timeScale=0;
+            pausePanel.SetActive(true);
+            isPaused=true;
+       
         }
+
 
 
     }
