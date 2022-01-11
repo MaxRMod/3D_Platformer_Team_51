@@ -17,7 +17,7 @@ public class AdvancedEnemy : MonoBehaviour
         
     }
     //11Jan2022 NavMesh, NavMeshAgent, NavMeshOffMeshLink
-    //AdvancedEnemy machen(Prefab)
+    //AdvancedEnemy machen(Prefab) TODO
 
 
     [SerializeField] private float ChaseSpeed;  
@@ -39,7 +39,7 @@ public class AdvancedEnemy : MonoBehaviour
 
         enemyRigidbody=GetComponent<Rigidbody>();
         agent=GetComponent<NavMeshAgent>();
-//fehlt nochwas
+//fehlt nochwas TODO
     }
 
 
@@ -93,7 +93,7 @@ public class AdvancedEnemy : MonoBehaviour
         private void NavigateToNextPoint(){
 
             currentWayPoint=(currentWayPoint+1)&wayPoints.Count;
-            agent.destination=wayPoints;//fehlt nochwas;
+        //    agent.destination=wayPoints;//TODO fehlt nochwas;
         }
 
     private bool PreyVisible(Vector3 targetPosition) {
