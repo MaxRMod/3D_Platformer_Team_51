@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AdvancedEnemy : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class AdvancedEnemy : MonoBehaviour
     {
         
     }
+    //11Jan2022 NavMesh, NavMeshAgent, NavMeshOffMeshLink
+    //AdvancedEnemy machen(Prefab)
+
 
     [SerializeField] private float ChaseSpeed;  
     [SerializeField] private float NormalSpeed;
@@ -28,19 +32,27 @@ public class AdvancedEnemy : MonoBehaviour
     private float distanceThreshold;
 
     private float ChaseEvadeDistance;
+    private NavMeshAgent agent;
 
 
+    public void Awake(){
 
-    private void Awake() {
-        enemyRigidbody = GetComponent<Rigidbody>();
+        enemyRigidbody=GetComponent<Rigidbody>();
+        agent=GetComponent<NavMeshAgent>();
+//fehlt nochwas
     }
+
 
     public enum Behaviour {
         LineOfSight,
         Intercept,
         PatternMovement,
         ChasePatternMovement,
-        Hide
+        Hide,
+
+        PatternMovementNavMesh
+
+
     }
 
     public Behaviour behaviour;
@@ -68,10 +80,21 @@ public class AdvancedEnemy : MonoBehaviour
                     PatternMovement();
                 }
                 break;
+            case Behaviour.PatternMovementNavMesh:
+                if(!agent.pathPending&&agent)
+                NavigateToNextPoint();
+            break;
             default:
                 break;
         }
     }
+
+
+        private void NavigateToNextPoint(){
+
+            currentWayPoint=(currentWayPoint+1)&wayPoints.Count;
+            agent.destination=wayPoints;//fehlt nochwas;
+        }
 
     private bool PreyVisible(Vector3 targetPosition) {
         Vector3 directionToTarget = targetPosition - transform.position;
