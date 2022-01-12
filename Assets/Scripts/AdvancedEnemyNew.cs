@@ -28,20 +28,38 @@ public class AdvancedEnemy : MonoBehaviour
     private float distanceThreshold;
 
     private float ChaseEvadeDistance;
+<<<<<<< Updated upstream
 
 
 
     private void Awake() {
         enemyRigidbody = GetComponent<Rigidbody>();
     }
+=======
+    private NavMeshAgent agent;
+
+    private void Awake() {
+        enemyRigidbody = GetComponent<Rigidbody>();
+        agent=GetComponent<NavMeshAgent>();
+        agent.autoBraking=false;
+        agent.destination=wayPoints[0].transform.position;
+}
+>>>>>>> Stashed changes
 
     public enum Behaviour {
         LineOfSight,
         Intercept,
         PatternMovement,
         ChasePatternMovement,
+<<<<<<< Updated upstream
         Hide
     }
+=======
+        Hide,
+
+        PatternMovementNavMesh
+}
+>>>>>>> Stashed changes
 
     public Behaviour behaviour;
 
@@ -68,6 +86,14 @@ public class AdvancedEnemy : MonoBehaviour
                     PatternMovement();
                 }
                 break;
+<<<<<<< Updated upstream
+=======
+            case Behaviour.PatternMovementNavMesh:
+                if(!agent.pathPending&&agent.remainingDistance<distanceThreshold){
+                        NavigateToNextPoint();
+                }   
+                break; 
+>>>>>>> Stashed changes
             default:
                 break;
         }

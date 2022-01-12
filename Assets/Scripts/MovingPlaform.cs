@@ -51,13 +51,28 @@ private Vector3 offset;
 
 
     }
-    void LateUpdate(){
+/*void LateUpdate(){
         if(smthIsOnPlatform){
             //currentlyOnPlatform.transform.position=transform.position+offset;
         }
 
     }
-    void OnTriggerEnter(Collider other){
+*/
+
+    void OnCollisionEnter(Collision col){
+        col.gameObject.transform.SetParent(gameObject.transform,true);
+        currentlyOnPlatform=col.gameObject;
+        smthIsOnPlatform=true;
+        //offset=col.transform.position-transform.position;
+    }
+
+    void OnCollisionExit(Collision exit){
+
+        exit.gameObject.transform.parent=null;
+        smthIsOnPlatform=false;
+        currentlyOnPlatform=null;
+    }
+/*    void OnTriggerEnter(Collider other){
         if(other.gameObject.tag=="Player"){
                 other.transform.parent=transform;
                 currentlyOnPlatform=other.gameObject;
@@ -75,6 +90,6 @@ private Vector3 offset;
             smthIsOnPlatform=false;
         
     }
-
+*/
 
 }
