@@ -33,13 +33,24 @@ public class AdvancedEnemy : MonoBehaviour
 
     private float ChaseEvadeDistance;
     private NavMeshAgent agent;
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
     public void Awake(){
 
+<<<<<<< Updated upstream
         enemyRigidbody=GetComponent<Rigidbody>();
         agent=GetComponent<NavMeshAgent>();
 //fehlt nochwas TODO
+=======
+    private void Awake() {
+        enemyRigidbody = GetComponent<Rigidbody>();
+        agent=GetComponent<NavMeshAgent>();
+        agent.autoBraking=false;
+        agent.destination=wayPoints[0].transform.position;
+>>>>>>> Stashed changes
     }
 
 
@@ -51,8 +62,11 @@ public class AdvancedEnemy : MonoBehaviour
         Hide,
 
         PatternMovementNavMesh
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
     }
 
     public Behaviour behaviour;
@@ -81,9 +95,16 @@ public class AdvancedEnemy : MonoBehaviour
                 }
                 break;
             case Behaviour.PatternMovementNavMesh:
+<<<<<<< Updated upstream
                 if(!agent.pathPending&&agent)
                 NavigateToNextPoint();
             break;
+=======
+                if(!agent.pathPending&&agent.remainingDistance<distanceThreshold){
+                        NavigateToNextPoint();
+                }   
+                break; 
+>>>>>>> Stashed changes
             default:
                 break;
         }
@@ -138,4 +159,13 @@ public class AdvancedEnemy : MonoBehaviour
             currentWayPoint = (currentWayPoint + 1) % wayPoints.Count;
         }
     }
+
+private void NavigateToNextPoint(){
+
+
+    currentWayPoint=(currentWayPoint+1)%wayPoints.Count;
+    agent.destination=wayPoints[currentWayPoint].transform.position;
+
+}
+
 }
