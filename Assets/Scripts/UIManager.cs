@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    public void LoadLevelByIndex(int levelIndex){
+        public void LoadLevelByIndex(int levelIndex){
         SceneManager.LoadScene(levelIndex);
 
     }

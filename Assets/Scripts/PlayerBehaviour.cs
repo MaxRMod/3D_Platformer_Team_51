@@ -25,12 +25,14 @@ public class PlayerBehaviour : MonoBehaviour
     Rigidbody platformRigidbody;
     bool isOnPlatform = false;
 
+    public GameObject pickupEffect;
+
     //SpeedBoost variables
-    private float speedBoostTimer;
+    [SerializeField]private float speedBoostTimer;
     private bool speedBoosted;
 
     //JumpBoost variables
-    private float jumpBoostTimer;
+    [SerializeField]private float jumpBoostTimer;
     private bool jumpBoosted;
 
     //Collectible variables
@@ -42,6 +44,10 @@ public class PlayerBehaviour : MonoBehaviour
 
     //Portal variables
     private Transform portalSpawnPoint;
+
+    //Health variables
+    private int lives;
+    public HealthManager currentManager;
 
     //Set all starting values
     void Awake()
@@ -97,6 +103,13 @@ public class PlayerBehaviour : MonoBehaviour
                 jumpBoosted = false;
             }
             
+        }
+
+        lives = currentManager.currentLives;
+
+        if (lives == 0) {
+            currentManager.ResetLives();
+            Spawn();
         }
     }
 
@@ -267,6 +280,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             speedBoosted = true;
             moveSettings.runVelocity *= 2;
+            Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
         }
 
@@ -274,6 +288,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             jumpBoosted = true;
             moveSettings.jumpVelocity *= 2;
+            Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
         }
 
@@ -281,6 +296,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             collectibleCounter++;
             collectibleText.text = "Coins: " + collectibleCounter;
+            Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
         }
         
@@ -288,6 +304,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (other.CompareTag("Key"))
         {
             hasKey = true;
+            Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
         }
 

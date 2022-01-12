@@ -2,6 +2,7 @@ public sealed class GameData
 {
     private static GameData instance;
     private int score=0;
+
     private GameData(){
             if(instance != null)
                 return ;
@@ -37,7 +38,9 @@ public sealed class GameData
     public int Lives{
 
         get;
+        
         set;
+        
     
     }
 }
