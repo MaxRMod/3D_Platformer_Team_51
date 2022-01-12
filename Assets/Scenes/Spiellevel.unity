@@ -1446,7 +1446,10 @@ MonoBehaviour:
     JUMP_AXIS: Jump
   spawnPoint: {fileID: 1933314958}
   MaxJumps: 2
-  collectibleText: {fileID: 0}
+  pickupEffect: {fileID: 6886485282577774253, guid: 7ab0c4102bf4ebf45934ecb76987e675, type: 3}
+  speedBoostTimer: 2
+  jumpBoostTimer: 2
+  collectibleText: {fileID: 87014762}
 --- !u!54 &752820336
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3205,15 +3208,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3196254675355912137, guid: 5e9d8e49753546c48a3b6c0f307e62e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.0481644
+      value: 3.36
       objectReference: {fileID: 0}
     - target: {fileID: 3196254675355912137, guid: 5e9d8e49753546c48a3b6c0f307e62e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 3196254675355912137, guid: 5e9d8e49753546c48a3b6c0f307e62e2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.9505348
+      value: -0.41
       objectReference: {fileID: 0}
     - target: {fileID: 3196254675355912137, guid: 5e9d8e49753546c48a3b6c0f307e62e2, type: 3}
       propertyPath: m_LocalRotation.w
