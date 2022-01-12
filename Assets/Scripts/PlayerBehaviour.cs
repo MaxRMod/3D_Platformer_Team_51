@@ -186,6 +186,10 @@ public class PlayerBehaviour : MonoBehaviour
             JumpCount -= 1;
         }
 
+        if(JumpCount==0&&IsGrounded()){
+            JumpCount=MaxJumps;
+        }
+
 
     }
 
