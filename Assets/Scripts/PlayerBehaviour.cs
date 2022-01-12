@@ -45,6 +45,10 @@ public class PlayerBehaviour : MonoBehaviour
     //Portal variables
     private Transform portalSpawnPoint;
 
+    //Health variables
+    private int lives;
+    public HealthManager currentManager;
+
     //Set all starting values
     void Awake()
     {
@@ -99,6 +103,13 @@ public class PlayerBehaviour : MonoBehaviour
                 jumpBoosted = false;
             }
             
+        }
+
+        lives = currentManager.currentLives;
+
+        if (lives == 0) {
+            currentManager.ResetLives();
+            Spawn();
         }
     }
 
