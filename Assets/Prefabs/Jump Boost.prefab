@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 4664357057630429171}
   m_Layer: 0
   m_Name: Jump Boost
-  m_TagString: Untagged
+  m_TagString: JumpBoost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
