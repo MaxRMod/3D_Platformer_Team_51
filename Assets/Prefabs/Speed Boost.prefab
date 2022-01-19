@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4200090338569732755}
   - component: {fileID: 3838567646270474856}
+  - component: {fileID: 7381742762518324994}
   m_Layer: 0
   m_Name: Speed Boost
   m_TagString: SpeedBoost
@@ -45,6 +46,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.15, y: 0.22, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7381742762518324994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2633931139189526340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1315172d7ad53634e952f7d8f3c02048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 95
 --- !u!1001 &4116067607699198130
 PrefabInstance:
   m_ObjectHideFlags: 0

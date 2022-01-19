@@ -147,6 +147,10 @@ MonoBehaviour:
   jumpBoostTimer: 2
   collectibleText: {fileID: 0}
   currentManager: {fileID: 0}
+  coinPickup: {fileID: 0}
+  speedPickup: {fileID: 0}
+  jumpPickup: {fileID: 0}
+  keyPickup: {fileID: 0}
 --- !u!114 &1586391007630638302
 MonoBehaviour:
   m_ObjectHideFlags: 0
