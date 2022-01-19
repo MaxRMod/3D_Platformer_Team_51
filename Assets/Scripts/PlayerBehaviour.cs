@@ -49,6 +49,12 @@ public class PlayerBehaviour : MonoBehaviour
     private int lives;
     public HealthManager currentManager;
 
+    //Sound variables
+    public AudioSource coinPickup;
+    public AudioSource speedPickup;
+    public AudioSource jumpPickup;
+    public AudioSource keyPickup;
+
     //Set all starting values
     void Awake()
     {
@@ -282,6 +288,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (other.CompareTag("SpeedBoost"))
         {
+            speedPickup.Play();
             speedBoosted = true;
             moveSettings.runVelocity *= 2;
             Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
@@ -290,6 +297,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (other.CompareTag("JumpBoost"))
         {
+            jumpPickup.Play();
             jumpBoosted = true;
             moveSettings.jumpVelocity *= 2;
             Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
@@ -298,6 +306,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (other.CompareTag("Collectible"))
         {
+            coinPickup.Play();
             collectibleCounter++;
             collectibleText.text = "Coins: " + collectibleCounter;
             Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
@@ -307,6 +316,7 @@ public class PlayerBehaviour : MonoBehaviour
     
         if (other.CompareTag("Key"))
         {
+            keyPickup.Play();
             hasKey = true;
             Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
