@@ -17,6 +17,8 @@ public class PlayerBehaviour : MonoBehaviour
     private float forwardInput, sidewaysInput, turnInput, jumpInput;
     private Vector3 initialScale;
 
+    public Animator anim;
+
     //Jump-variables
     private int JumpCount = 0;
     private float fallDownFaster=1.7f;
@@ -84,6 +86,11 @@ public class PlayerBehaviour : MonoBehaviour
         }
         Turn();
         GetInput();
+
+        anim.SetBool("isGrounded", !Input.GetButton("Jump"));
+        anim.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
+        anim.SetBool("RunningRight", turnInput > 0);
+        anim.SetBool("RunningLeft", turnInput < 0);
 
         if (speedBoosted)
         {
