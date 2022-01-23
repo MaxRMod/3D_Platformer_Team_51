@@ -363,6 +363,14 @@ public class PlayerBehaviour : MonoBehaviour
             Destroy(other.gameObject);
         }
 
+        if (other.CompareTag("HealthKit"))
+        {
+            jumpPickup.Play();
+            Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
+            currentManager.Heal(5);
+            Destroy(other.gameObject);
+        }
+
     }
 }
 
