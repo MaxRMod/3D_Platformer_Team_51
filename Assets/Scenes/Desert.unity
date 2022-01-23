@@ -421,6 +421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8621115136901627094, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8621115136901627095, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
       propertyPath: spawnPoint
       value: 
