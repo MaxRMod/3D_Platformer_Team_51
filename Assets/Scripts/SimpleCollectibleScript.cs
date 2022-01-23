@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Script for pickup rotation. must be assigned to pickups
 public class SimpleCollectibleScript : MonoBehaviour {
 	[SerializeField]
 	public float rotationSpeed;

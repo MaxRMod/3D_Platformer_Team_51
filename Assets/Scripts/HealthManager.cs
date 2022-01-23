@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// README: Script for managing players health. A text has to be assigned to it in order to display the stats
 public class HealthManager : MonoBehaviour
 {
     public Text healthText;

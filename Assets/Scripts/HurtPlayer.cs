@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Script for dealing damage to player
 public class HurtPlayer : MonoBehaviour
 {
 
