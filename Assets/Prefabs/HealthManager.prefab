@@ -46,4 +46,4 @@ MonoBehaviour:
   healthText: {fileID: 0}
   currentLives: 5
   maxLives: 5
-  damageSound: {fileID: 8049578878882474943, guid: 787d59ac16638e7448124adb9e726193, type: 3}
+  damageSound: {fileID: 0}
