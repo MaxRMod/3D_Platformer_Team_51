@@ -154,6 +154,8 @@ MonoBehaviour:
   speedPickup: {fileID: 0}
   jumpPickup: {fileID: 0}
   keyPickup: {fileID: 0}
+  runSoundGO: {fileID: 0}
+  runningSound: {fileID: 0}
 --- !u!114 &1586391007630638302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,6 +266,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fedecbd1aa68924b816f15cb97e611a, type: 3}
+--- !u!1 &4020983981207069565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4020983980232809014, guid: 9fedecbd1aa68924b816f15cb97e611a, type: 3}
+  m_PrefabInstance: {fileID: 1244805451}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4361374555312388551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4361374554138886284, guid: 9fedecbd1aa68924b816f15cb97e611a, type: 3}
@@ -274,3 +281,16 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 7666986768240843510, guid: 9fedecbd1aa68924b816f15cb97e611a, type: 3}
   m_PrefabInstance: {fileID: 1244805451}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &417950529167163318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4020983981207069565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50357dd2a59073047aa839361cdabaf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips: []

@@ -9,7 +9,11 @@ public class HealthManager : MonoBehaviour
     [SerializeField]
     public int currentLives;
     [SerializeField]
-    private int maxLives;
+    public int maxLives;
+
+    [SerializeField]
+    public AudioSource damageSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +27,7 @@ public class HealthManager : MonoBehaviour
     }
 
     public void TakeDamage(int amount) {
+        damageSound.Play();
         currentLives -= amount;
     }
 

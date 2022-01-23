@@ -16,7 +16,6 @@ public class PlayerBehaviour : MonoBehaviour
     private Quaternion targetRotation;
     private float forwardInput, sidewaysInput, turnInput, jumpInput;
     private Vector3 initialScale;
-
     public Animator anim;
 
     //Jump-variables
@@ -57,6 +56,12 @@ public class PlayerBehaviour : MonoBehaviour
     public AudioSource jumpPickup;
     public AudioSource keyPickup;
 
+    //Run Sounds
+    private float runSoundTimer;
+    public AudioClip[] clips;
+    public AudioSource audioSource;
+    private bool stepped;
+
     //Set all starting values
     void Awake()
     {
@@ -76,6 +81,8 @@ public class PlayerBehaviour : MonoBehaviour
         JumpCount = MaxJumps;
         collectibleCounter = 0;
         collectibleText = GameObject.Find("collectibleText").GetComponent<Text>();
+        stepped = false;
+        runSoundTimer = 0;
     }
 
     //Called every frame
@@ -91,6 +98,25 @@ public class PlayerBehaviour : MonoBehaviour
         anim.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
         anim.SetBool("RunningRight", turnInput > 0);
         anim.SetBool("RunningLeft", turnInput < 0);
+
+        if (forwardInput != 0 && IsGrounded()|| sidewaysInput != 0 && IsGrounded()) {
+            if (!stepped) {
+                stepped = true;
+                audioSource.PlayOneShot(clips[UnityEngine.Random.Range(0, clips.Length)]);
+            }
+        }
+
+        if (stepped)
+        {
+        
+            runSoundTimer += Time.deltaTime;
+            if (runSoundTimer >= 0.5)
+            {
+                runSoundTimer = 0;
+                stepped = false;
+            }
+            
+        }
 
         if (speedBoosted)
         {
@@ -138,6 +164,14 @@ public class PlayerBehaviour : MonoBehaviour
             }
         }
     }
+
+    /*private void Step() {
+        audioSource.PlayOneShot(GetRandomClip());
+    }
+
+    private AudioClip GetRandomClip() {
+        return clips[UnityEngine.Random.Range(0, clips.Length)];
+    }*/
 
     #region PlayerMovement
     //Saves user input
