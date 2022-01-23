@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UIManager : MonoBehaviour
+public class MainMenu: MonoBehaviour
 {
         public void LoadLevelByIndex(int levelIndex){
         SceneManager.LoadScene(levelIndex);
@@ -26,14 +26,26 @@ public class UIManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    //void Update()
+    //{
+      //  if(Input.anyKeyDown)
+        //{
+        //resetStats();
+        //SceneManager.LoadScene("Spiellevel");
+
+        //}
+
+    //}
+
+    public void PlayGame()
     {
-        if(Input.anyKeyDown)
-        {
         resetStats();
         SceneManager.LoadScene("Spiellevel");
+    }
 
-        }
-
-}
+    public void QuitGame()
+    {
+        Debug.Log("Quit!");
+        Application.Quit();
+    }
 }
