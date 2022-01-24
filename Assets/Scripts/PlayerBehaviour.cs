@@ -94,6 +94,8 @@ public class PlayerBehaviour : MonoBehaviour
         Turn();
         GetInput();
 
+
+
         anim.SetBool("isGrounded", !Input.GetButton("Jump"));
         anim.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
         anim.SetBool("RunningRight", turnInput > 0);
@@ -197,22 +199,11 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Run()
     {
-       if(!IsGrounded()){
-            
-            velocity.x=playerRigidbody.velocity.x;
-            velocity.y=playerRigidbody.velocity.y;
-            velocity.z=playerRigidbody.velocity.z;
-        //if(isOnPlatform){
-        //  playerRigidbody.velocity+=platformRigidbody.velocity;
-        // }     
-           playerRigidbody.velocity = transform.TransformDirection(velocity);
-        }
-        else{
-            velocity.y = playerRigidbody.velocity.y;
-            velocity.z = forwardInput * moveSettings.runVelocity;
-            velocity.x = sidewaysInput * moveSettings.runVelocity;
-            playerRigidbody.velocity = transform.TransformDirection(velocity);
-        }
+        velocity.y = playerRigidbody.velocity.y;
+        velocity.z = forwardInput * moveSettings.runVelocity;
+        velocity.x = sidewaysInput * moveSettings.runVelocity;
+        playerRigidbody.velocity = transform.TransformDirection(velocity);
+        
     }
 
     void Turn()
