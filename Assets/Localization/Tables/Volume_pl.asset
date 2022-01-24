@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Volume_pl
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pl
+  m_SharedData: {fileID: 11400000, guid: 5b4d483940b3a4a1f8f43410b7e31165, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 81620099072
+    m_Localized: "G\u0141O\u015ANO\u015A\u0106"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4024387493888
+    m_Localized: "PE\u0141NY EKRAN"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068666761216
+    m_Localized: OPCJE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4918650855424
+    m_Localized: "J\u0118ZYK"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5985828593664
+    m_Localized: "WR\xD3\u0106"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18629994209280
+    m_Localized: "ZAKO\u0143CZ"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19790436491264
+    m_Localized: Opcje
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19878294577152
+    m_Localized: "Menu G\u0142\xF3wne"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20080988512256
+    m_Localized: -Pauza-
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20135782899712
+    m_Localized: Kontynuuj
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20443766448128
+    m_Localized: 'Monety:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20479321563136
+    m_Localized: "\u017Bycia:"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

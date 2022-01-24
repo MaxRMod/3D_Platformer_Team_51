@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Volume Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UI Text
+  m_TableCollectionNameGuidString: 5b4d483940b3a4a1f8f43410b7e31165
+  m_Entries:
+  - m_Id: 81620099072
+    m_Key: Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4024387493888
+    m_Key: Fullscreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068666761216
+    m_Key: OPTIONS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4918650855424
+    m_Key: LANGUAGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5985828593664
+    m_Key: BACK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18629994209280
+    m_Key: QUIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19790436491264
+    m_Key: Options (GAME)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19878294577152
+    m_Key: Main Menu (GAME)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20080988512256
+    m_Key: Pause (GAME)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20135782899712
+    m_Key: Continue (GAME)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20443766448128
+    m_Key: Coins (GAME)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20479321563136
+    m_Key: Lives (GAME)
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1643012357189
