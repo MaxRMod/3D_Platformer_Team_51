@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu: MonoBehaviour
 {
-        public void LoadLevelByIndex(int levelIndex){
+    public void LoadLevelByIndex(int levelIndex){
         SceneManager.LoadScene(levelIndex);
-
     }
 
     public void loadLevelByName(string levelName){
@@ -25,24 +24,14 @@ public class MainMenu: MonoBehaviour
         Time.timeScale=1;
     }
 
-    // Update is called once per frame
-    //void Update()
-    //{
-      //  if(Input.anyKeyDown)
-        //{
-        //resetStats();
-        //SceneManager.LoadScene("Spiellevel");
-
-        //}
-
-    //}
-
+    //MainMenu -> Game
     public void PlayGame()
     {
         resetStats();
         SceneManager.LoadScene("Spiellevel");
     }
 
+    //Exit Game
     public void QuitGame()
     {
         Debug.Log("Quit!");
