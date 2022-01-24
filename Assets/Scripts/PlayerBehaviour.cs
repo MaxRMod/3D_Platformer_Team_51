@@ -31,10 +31,12 @@ public class PlayerBehaviour : MonoBehaviour
     //SpeedBoost variables
     [SerializeField]private float speedBoostTimer;
     private bool speedBoosted;
+    private float initialRunSpeed;
 
     //JumpBoost variables
     [SerializeField]private float jumpBoostTimer;
     private bool jumpBoosted;
+    private float initialJumpSpeed;
 
     //Collectible variables
     private int collectibleCounter;
@@ -70,6 +72,8 @@ public class PlayerBehaviour : MonoBehaviour
         forwardInput = sidewaysInput = turnInput = jumpInput = 0;
         targetRotation = transform.rotation;
         playerRigidbody = gameObject.GetComponent<Rigidbody>();
+        initialRunSpeed = moveSettings.runVelocity;
+        initialJumpSpeed = moveSettings.jumpVelocity;
     }
 
     private void Start()
@@ -93,8 +97,6 @@ public class PlayerBehaviour : MonoBehaviour
         }
         Turn();
         GetInput();
-
-
 
         anim.SetBool("isGrounded", !Input.GetButton("Jump"));
         anim.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
@@ -126,7 +128,7 @@ public class PlayerBehaviour : MonoBehaviour
             speedBoostTimer += Time.deltaTime;
             if (speedBoostTimer >= 3)
             {
-                moveSettings.runVelocity /= 2;
+                moveSettings.runVelocity  = initialRunSpeed;
                 speedBoostTimer = 0;
                 speedBoosted = false;
             }
@@ -139,7 +141,7 @@ public class PlayerBehaviour : MonoBehaviour
             jumpBoostTimer += Time.deltaTime;
             if (jumpBoostTimer >= 3)
             {
-                moveSettings.jumpVelocity /= 2;
+                moveSettings.jumpVelocity = initialJumpSpeed;
                 jumpBoostTimer = 0;
                 jumpBoosted = false;
             }
@@ -318,8 +320,12 @@ public class PlayerBehaviour : MonoBehaviour
         if (other.CompareTag("SpeedBoost"))
         {
             speedPickup.Play();
-            speedBoosted = true;
-            moveSettings.runVelocity *= 2;
+            if (speedBoosted) {
+                speedBoostTimer = 0;
+            } else {
+                speedBoosted = true;
+                moveSettings.runVelocity *= 1.5f;
+            }
             Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
         }
@@ -327,8 +333,12 @@ public class PlayerBehaviour : MonoBehaviour
         if (other.CompareTag("JumpBoost"))
         {
             jumpPickup.Play();
-            jumpBoosted = true;
-            moveSettings.jumpVelocity *= 2;
+            if (jumpBoosted) {
+                jumpBoostTimer = 0;
+            } else {
+                jumpBoosted = true;
+                moveSettings.jumpVelocity *= 1.5f;
+            }
             Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
         }
