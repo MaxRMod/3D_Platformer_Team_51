@@ -57,6 +57,7 @@ public class PlayerBehaviour : MonoBehaviour
     public AudioSource speedPickup;
     public AudioSource jumpPickup;
     public AudioSource keyPickup;
+    public AudioSource healPickup;
 
     //Run Sounds
     private float runSoundTimer;
@@ -363,7 +364,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (other.CompareTag("HealthKit"))
         {
-            jumpPickup.Play();
+            healPickup.Play();
             Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
             currentManager.Heal(5);
             Destroy(other.gameObject);
