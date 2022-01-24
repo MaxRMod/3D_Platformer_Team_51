@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 8621115136901627080}
   - component: {fileID: 8621115136901627095}
   - component: {fileID: 1254973022}
-  - component: {fileID: 209051366}
   m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
@@ -165,19 +164,6 @@ BoxCollider:
   m_GameObject: {fileID: 8621115136901627094}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.3, y: 1.7, z: 2.3}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &209051366
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8621115136901627094}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.3, y: 1.7, z: 2.3}
