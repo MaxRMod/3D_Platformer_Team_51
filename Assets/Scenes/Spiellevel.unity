@@ -1000,6 +1000,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7355244067237117641, guid: 0b25110d06902464e911da6a67dac6df, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7671924587790836496, guid: 0b25110d06902464e911da6a67dac6df, type: 3}
       propertyPath: m_Name
       value: MovingPlatform
@@ -2381,6 +2385,10 @@ PrefabInstance:
     - target: {fileID: 5984427412382245938, guid: 87d05c5c7aabc9a4db04d9df6933d4cb, type: 3}
       propertyPath: m_RootOrder
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984427412382245938, guid: 87d05c5c7aabc9a4db04d9df6933d4cb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5984427412382245938, guid: 87d05c5c7aabc9a4db04d9df6933d4cb, type: 3}
       propertyPath: m_LocalPosition.x

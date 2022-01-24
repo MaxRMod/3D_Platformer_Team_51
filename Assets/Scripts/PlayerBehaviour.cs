@@ -20,7 +20,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     //Jump-variables
     private int JumpCount = 0;
-    private float fallDownFaster=1.7f;
+    private float fallDownFaster=1f;
     [SerializeField] private int MaxJumps = 2; //Maximum amount of jumps
 
     Rigidbody platformRigidbody;

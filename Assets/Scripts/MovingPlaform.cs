@@ -19,14 +19,6 @@ private float distance=0f;
 [SerializeField] GameObject currentlyOnPlatform=null;
 private Vector3 offset;
 
-
-
-
-
-
-
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -58,20 +50,13 @@ private Vector3 offset;
 
     
     void OnCollisionEnter(Collision other){
-        
-                other.gameObject.transform.SetParent(gameObject.transform,true);
-                currentlyOnPlatform=other.gameObject;
-                smthIsOnPlatform=true;
-                
-        
+        other.gameObject.transform.SetParent(gameObject.transform);
     }
 
     void OnCollisionExit(Collision exit){
-            exit.gameObject.transform.parent=null;    
-            currentlyOnPlatform=null;
-            smthIsOnPlatform=false;
-        
+        exit.gameObject.transform.SetParent(null);    
     }
 
 
 }
+
