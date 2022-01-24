@@ -278,11 +278,7 @@ public class PlayerBehaviour : MonoBehaviour
                 */
         }
 
-        if(collision.gameObject.CompareTag("MovingPlatform")){
-            //transform.parent
-            platformRigidbody=collision.gameObject.GetComponent<Rigidbody>();
-            isOnPlatform=true;
-        }
+    
 
         if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("MovingPlatform"))
         {
@@ -300,16 +296,17 @@ public class PlayerBehaviour : MonoBehaviour
         Spawn();
     }
 
-    void StopMovingWithPlatform(Collision collisionExit){
+/*    void OnCollisionExit(Collision collisionExit){
 
         
         if(collisionExit.gameObject.tag=="MovingPlatform"){
             platformRigidbody=null;
             isOnPlatform=false;
+            collisionExit.gameObject.transform.parent=null;
         }
     }
 
-    
+  */  
 
 
     

@@ -55,19 +55,14 @@ private Vector3 offset;
 
 
     }
-    void LateUpdate(){
-        //      useless RightNow            if(smthIsOnPlatform){
-            //currentlyOnPlatform.transform.position=transform.position+offset;
-        //}
 
-    }
     
     void OnCollisionEnter(Collision other){
         
-                other.transform.parent=transform;
+                other.gameObject.transform.SetParent(gameObject.transform,true);
                 currentlyOnPlatform=other.gameObject;
                 smthIsOnPlatform=true;
-                //offset=other.transform.position-transform.position;
+                
         
     }
 

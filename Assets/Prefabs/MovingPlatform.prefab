@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1690686655817227711}
   - component: {fileID: 7513127539562039317}
   - component: {fileID: 7355244067237117641}
-  - component: {fileID: 2637837536751446253}
   m_Layer: 0
   m_Name: MovingPlatform
   m_TagString: MovingPlatform
@@ -31,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7671924587790836496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_LocalScale: {x: 2, y: 0.5, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -127,19 +126,6 @@ BoxCollider:
   m_GameObject: {fileID: 7671924587790836496}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &2637837536751446253
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7671924587790836496}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
