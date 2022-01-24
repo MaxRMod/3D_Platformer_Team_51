@@ -32,6 +32,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
+  - m_GUID: a092c24d4d4af471c82ab1fc64fe5b37
+    m_Address: "S\u0301lu\u030Ansko Godka (sg)"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 29dc068fdac9944dd9f31e99a209231a, type: 2}
   m_SchemaSet:

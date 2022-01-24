@@ -15,17 +15,7 @@ public class OptionsMenu : MonoBehaviour
 
     //Quality
 
-public IEnumerator SetLanguage()
-    {
-        // Wait for the localization system to initialize, loading Locales, preloading, etc.
-        yield return LocalizationSettings.InitializationOperation;
 
-        // This variable selects the language. For example, if in the table your first language is English then 0 = English. If the second language in the table is Russian then 1 = Russian etc.
-        int i = 0;
-
-// This part changes the language
-        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[i];
-    }
 
     public AudioMixer volumeMixer;
     //Volume
