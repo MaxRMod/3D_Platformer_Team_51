@@ -3181,10 +3181,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2111232331, guid: 020d34ead71123c4d938a3f8fc14a454, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: fa71c20f1957c004f96f52d62946b899, type: 2}
     - target: {fileID: 1845632899003270010, guid: 020d34ead71123c4d938a3f8fc14a454, type: 3}
       propertyPath: m_Name
       value: fence (closed)
       objectReference: {fileID: 0}
+    - target: {fileID: 4098136170560646619, guid: 020d34ead71123c4d938a3f8fc14a454, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: fa71c20f1957c004f96f52d62946b899, type: 2}
     - target: {fileID: 5825107701175513240, guid: 020d34ead71123c4d938a3f8fc14a454, type: 3}
       propertyPath: m_RootOrder
       value: 42
