@@ -8,12 +8,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: f9def6bbaa3e58d4fa0bb4e926c3fa6e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Spiellevel.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestScene.unity
     guid: 81a7deaf5f595cd41b92988b148e14f2
+  - enabled: 1
+    path: Assets/Scenes/LevelOne.unity
+    guid: e5886c61e40214c29a8baf753abe900d
+  - enabled: 1
+    path: Assets/Scenes/LevelTwo.unity
+    guid: 98dd3b7c487874ec2adb6c5bc931eff1
+  - enabled: 1
+    path: Assets/Scenes/SummerForest.unity
+    guid: 71f8925a50db43f49866f396ed257b3f
+  - enabled: 1
+    path: Assets/Scenes/Desert.unity
+    guid: 4cf2ba04a2f805a48ac0933808b3cf15
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 117e26bd287dd487597af1bd36ae0f4c, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 70fda218f0947424c9919959aeeb0ae8, type: 2}
