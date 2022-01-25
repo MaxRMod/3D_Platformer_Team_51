@@ -255,7 +255,7 @@ public class PlayerBehaviour : MonoBehaviour
                
                //TODO
                //Nochmal PDF angucken und Code überarbeiten, sonst gibt es hier ein Problem  mit bumpSpeed
-               /* if(enemy.invincible)
+                if(enemy.invincible)
                 {
                     OnDeath();
                 }
@@ -269,7 +269,8 @@ public class PlayerBehaviour : MonoBehaviour
                 {
                     OnDeath();
                 }
-                */
+                
+                
         }
 
     
