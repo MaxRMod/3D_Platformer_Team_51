@@ -65,6 +65,8 @@ public class PlayerBehaviour : MonoBehaviour
     public AudioSource audioSource;
     private bool stepped;
 
+    
+
     //Set all starting values
     void Awake()
     {
@@ -85,9 +87,18 @@ public class PlayerBehaviour : MonoBehaviour
         speedBoostTimer = 0;
         JumpCount = MaxJumps;
         collectibleCounter = 0;
-        collectibleText = GameObject.Find("collectibleText").GetComponent<Text>();
+        //collectibleText = GameObject.Find("collectibleText").GetComponent<Text>();
         stepped = false;
         runSoundTimer = 0;
+
+        collectibleText=GameObject.Find("collectibleText").GetComponent<Text>();
+        updateStats();
+
+        
+    }
+    public void updateStats(){
+        this.collectibleText.text="Lives: "+GameData.Instance.Lives.ToString()+"\nCoins: "+ GameData.Instance.Score.ToString();
+
     }
 
     //Called every frame
