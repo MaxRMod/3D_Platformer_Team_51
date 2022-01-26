@@ -1999,6 +1999,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2156558338188557001, guid: 49cda888578e94742a44f98f6805c897, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156558338188557001, guid: 49cda888578e94742a44f98f6805c897, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 2469404456075440526, guid: 49cda888578e94742a44f98f6805c897, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -2027,6 +2035,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 398691264}
+    - target: {fileID: 7674236786320387955, guid: 49cda888578e94742a44f98f6805c897, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResumeFromPause
+      objectReference: {fileID: 0}
     - target: {fileID: 7674236786486045632, guid: 49cda888578e94742a44f98f6805c897, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -2129,11 +2141,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674236787286630408, guid: 49cda888578e94742a44f98f6805c897, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7674236787286630408, guid: 49cda888578e94742a44f98f6805c897, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7674236787286630415, guid: 49cda888578e94742a44f98f6805c897, type: 3}
       propertyPath: m_IsActive
