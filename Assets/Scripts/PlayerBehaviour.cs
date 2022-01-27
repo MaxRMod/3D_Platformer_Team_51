@@ -104,6 +104,7 @@ public class PlayerBehaviour : MonoBehaviour
     //Called every frame
     void Update()
     {
+    	//Cursor.visible = false;
         if(playerRigidbody.velocity.y<0){
             playerRigidbody.velocity+=Vector3.up*Physics.gravity.y*fallDownFaster*Time.deltaTime;
         }
