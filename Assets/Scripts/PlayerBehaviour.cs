@@ -91,13 +91,13 @@ public class PlayerBehaviour : MonoBehaviour
         stepped = false;
         runSoundTimer = 0;
 
-        collectibleText=GameObject.Find("collectibleText").GetComponent<Text>();
+        //collectibleText=GameObject.Find("collectibleText").GetComponent<Text>();
         updateStats();
 
         
     }
     public void updateStats(){
-        this.collectibleText.text="Lives: "+GameData.Instance.Lives.ToString()+"\nCoins: "+ GameData.Instance.Score.ToString();
+        this.collectibleText.text="Coins: " + collectibleCounter;
 
     }
 
@@ -112,8 +112,8 @@ public class PlayerBehaviour : MonoBehaviour
 
         anim.SetBool("isGrounded", !Input.GetButton("Jump"));
         anim.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
-        anim.SetBool("RunningRight", turnInput > 0);
-        anim.SetBool("RunningLeft", turnInput < 0);
+        anim.SetBool("RunningRight", turnInput > 0.2);
+        anim.SetBool("RunningLeft", turnInput < -0.2);
 
         if (forwardInput != 0 && IsGrounded()|| sidewaysInput != 0 && IsGrounded()) {
             if (!stepped) {
