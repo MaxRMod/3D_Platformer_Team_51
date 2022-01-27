@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8911625312790419913}
   - component: {fileID: 8911625312790419918}
   - component: {fileID: 8911625312790419925}
+  - component: {fileID: 6959297266600423593}
   m_Layer: 6
   m_Name: BombFinishedPrefab
   m_TagString: Enemy
@@ -128,3 +129,15 @@ MonoBehaviour:
   speed: 2
   invincible: 0
   bumpSpeed: 10
+--- !u!114 &6959297266600423593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8911625312790419919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34470cc0e33aa9e4fbe12b56f9cbe4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

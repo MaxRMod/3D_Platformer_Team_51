@@ -3,20 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AdvancedEnemy : MonoBehaviour
+public class AdvancedEnemyNew : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     [SerializeField] private float ChaseSpeed;  
     [SerializeField] private float NormalSpeed;
     [SerializeField] private GameObject Prey;
@@ -28,7 +16,7 @@ public class AdvancedEnemy : MonoBehaviour
     [SerializeField] 
     private float distanceThreshold;
 
-    private float ChaseEvadeDistance;
+    [SerializeField]private float ChaseEvadeDistance;
 
 private NavMeshAgent agent;
 
@@ -66,6 +54,9 @@ private NavMeshAgent agent;
                 if (Vector3.Distance(transform.position, Prey.transform.position) < ChaseEvadeDistance){
                     ChaseLineOfSight(Prey.transform.position, ChaseSpeed);
                 }
+                else{
+                    PatternMovement();
+                }
                 break;
             case Behaviour.Hide:
                 if (PreyVisible(Prey.transform.position)) {
@@ -76,7 +67,7 @@ private NavMeshAgent agent;
                 break;
             case Behaviour.PatternMovementBehaviour:
                 
-                if(agent.pathPending&&agent.remainingDistance<distanceThreshold){
+                if(!agent.pathPending&&agent.remainingDistance<distanceThreshold){
 
                     NavigateToNextPoint();
                 }
@@ -111,6 +102,8 @@ private NavMeshAgent agent;
     }
 
     private void Intercept(Vector3 targetPosition) {
+        Vector3 enemyPosition=gameObject.transform.position;
+        Vector3 preyPosition=Prey.transform.position;
         float timeToClose;
         
         var VelocityRelative = Prey.GetComponent<Rigidbody>().velocity - enemyRigidbody.velocity;

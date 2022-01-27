@@ -15,8 +15,7 @@ private Rigidbody rbody;
 
 private float distance=0f;
 
-[SerializeField] bool smthIsOnPlatform=false;
-[SerializeField] GameObject currentlyOnPlatform=null;
+
 private Vector3 offset;
 
     // Start is called before the first frame update

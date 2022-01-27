@@ -24,7 +24,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private int MaxJumps = 2; //Maximum amount of jumps
 
     Rigidbody platformRigidbody;
-    bool isOnPlatform = false;
+    
 
     public GameObject pickupEffect;
 
