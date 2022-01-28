@@ -20,8 +20,8 @@ public class SlidingStone : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("DeathZone")) {
             this.transform.position = spawnPoint.transform.position;
-            this.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            this.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            this.GetComponent<Rigidbody>().velocity = Vector3.one;
+            this.GetComponent<Rigidbody>().angularVelocity = Vector3.one;
         }
     }
 }
