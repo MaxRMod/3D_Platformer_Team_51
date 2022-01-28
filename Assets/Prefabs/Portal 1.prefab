@@ -4913,6 +4913,7 @@ Transform:
   - {fileID: 4638952793010032638}
   - {fileID: 8328053762992363310}
   - {fileID: 1233971264}
+  - {fileID: 9156905916581140686}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -146.91501, z: 0}
@@ -4974,8 +4975,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeee27638c8afd94fb81ec0ee7b88fec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portal2: {fileID: 0}
-  offset: {fileID: 8328053762992363311}
+  linkedPortal: {fileID: 0}
+--- !u!1 &5182643191569511876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9156905916581140686}
+  m_Layer: 0
+  m_Name: PortalSpawnPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9156905916581140686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5182643191569511876}
+  m_LocalRotation: {x: -0, y: 0.95860887, z: -0, w: 0.2847265}
+  m_LocalPosition: {x: -4.382564, y: -3.2797918, z: -0.24889958}
+  m_LocalScale: {x: 3.0816915, y: 2, z: 2.3501582}
+  m_Children: []
+  m_Father: {fileID: 4638952793353904734}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3800339779847485423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5045,11 +5075,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eaa3c47cccc5cf46aa9eaea1bac925b, type: 3}
---- !u!1 &8328053762992363311 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5129235088275120320, guid: 1eaa3c47cccc5cf46aa9eaea1bac925b, type: 3}
-  m_PrefabInstance: {fileID: 3800339779847485423}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8328053762992363310 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5129235088275120321, guid: 1eaa3c47cccc5cf46aa9eaea1bac925b, type: 3}

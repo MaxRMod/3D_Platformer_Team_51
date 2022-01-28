@@ -4804,6 +4804,36 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!1 &471160169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 471160170}
+  m_Layer: 0
+  m_Name: PortalSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &471160170
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471160169}
+  m_LocalRotation: {x: -0, y: -0.9460837, z: -0, w: -0.32392225}
+  m_LocalPosition: {x: -0.83784676, y: -3.2797918, z: 19.286541}
+  m_LocalScale: {x: 2.9076843, y: 2, z: 2.4625456}
+  m_Children: []
+  m_Father: {fileID: 4689652966857859006}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4689652966262207005
 GameObject:
   m_ObjectHideFlags: 0
@@ -4913,6 +4943,7 @@ Transform:
   - {fileID: 4689652966262207006}
   - {fileID: 8279604840495011490}
   - {fileID: 13642152}
+  - {fileID: 471160170}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -146.91501, z: 0}
@@ -4974,8 +5005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeee27638c8afd94fb81ec0ee7b88fec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portal2: {fileID: 0}
-  offset: {fileID: 8279604840495011489}
+  linkedPortal: {fileID: 0}
 --- !u!1001 &4564593762936691783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5045,11 +5075,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eeb67ea0e3da0d242898f6f7b8d77c7f, type: 3}
---- !u!1 &8279604840495011489 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5602373946189105894, guid: eeb67ea0e3da0d242898f6f7b8d77c7f, type: 3}
-  m_PrefabInstance: {fileID: 4564593762936691783}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8279604840495011490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5602373946189105893, guid: eeb67ea0e3da0d242898f6f7b8d77c7f, type: 3}

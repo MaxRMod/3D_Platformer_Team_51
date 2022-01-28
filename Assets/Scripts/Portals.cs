@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Portals : MonoBehaviour
 {
-    [SerializeField]private GameObject portal2;
-    [SerializeField]private GameObject offset;
-    //[SerializeField]private Transform teleportPoint;
+    [SerializeField]private GameObject linkedPortal;
+    [SerializeField]public GameObject teleportPoint;
+    [SerializeField]private Quaternion rotation;
 
 
     // Start is called before the first frame update
@@ -15,7 +15,7 @@ public class Portals : MonoBehaviour
        
     }
 
-    // Update is called once per frame
+    // Update is called once per framelinkedPortal
     void Update()
     {
         
@@ -25,12 +25,17 @@ public class Portals : MonoBehaviour
         
         if (other.CompareTag("Player"))
         {
+            var yRotation = linkedPortal.transform.eulerAngles.y;
             if (gameObject.CompareTag("Portal2")) {
-                other.transform.position = new Vector3(portal2.transform.position.x + 0.4f, portal2.transform.position.y + 0.45f, portal2.transform.position.z + 0.4f);
+                //other.transform.position = new Vector3(linkedPortal.transform.position.x + 0.4f, linkedPortal.transform.position.y + 0.45f, linkedPortal.transform.position.z + 0.4f);
+                GameObject point = linkedPortal.GetComponent<Portals>().teleportPoint;
+                other.transform.position = new Vector3(point.transform.position.x, point.transform.position.y, point.transform.position.z);
+                other.transform.Rotate(other.transform.eulerAngles.x, yRotation, other.transform.eulerAngles.z);
             } else if (gameObject.CompareTag("Portal1")) {
-                other.transform.position = new Vector3(portal2.transform.position.x - 0.4f, portal2.transform.position.y + 0.45f, portal2.transform.position.z - 0.4f);
+                GameObject point = linkedPortal.GetComponent<Portals>().teleportPoint;
+                other.transform.position = new Vector3(point.transform.position.x, point.transform.position.y, point.transform.position.z);
+                other.transform.Rotate(other.transform.eulerAngles.x, yRotation, other.transform.eulerAngles.z);
             }
-            other.transform.rotation = portal2.transform.rotation;
         }
     }
 }
