@@ -9,4 +9,5 @@ public class DeathZone : MonoBehaviour
 
         Gizmos.DrawIcon(gameObject.transform.position,"DeathZone");
     }
+
 }
