@@ -142,7 +142,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
         
             speedBoostTimer += Time.deltaTime;
-            if (speedBoostTimer >= 3)
+            if (speedBoostTimer >= 6)
             {
                 moveSettings.runVelocity  = initialRunSpeed;
                 speedBoostTimer = 0;
@@ -155,7 +155,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
         
             jumpBoostTimer += Time.deltaTime;
-            if (jumpBoostTimer >= 3)
+            if (jumpBoostTimer >= 6)
             {
                 moveSettings.jumpVelocity = initialJumpSpeed;
                 jumpBoostTimer = 0;
@@ -359,7 +359,7 @@ public class PlayerBehaviour : MonoBehaviour
                 jumpBoostTimer = 0;
             } else {
                 jumpBoosted = true;
-                moveSettings.jumpVelocity *= 1.5f;
+                moveSettings.jumpVelocity *= 1.8f;
             }
             Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
             boosterList.Add(other.gameObject);
@@ -393,7 +393,8 @@ public class PlayerBehaviour : MonoBehaviour
             Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
             currentManager.Heal(5);
             boosterList.Add(other.gameObject);
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
+           // Destroy(other.gameObject);
         }
 
     }
