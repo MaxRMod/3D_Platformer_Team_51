@@ -29,6 +29,9 @@ public class PlayerBehaviour : MonoBehaviour
     public GameObject pickupEffect;
 
     //SpeedBoost variables
+
+    List<GameObject> boosterList = new List<GameObject>();
+
     [SerializeField]private float speedBoostTimer;
     private bool speedBoosted;
     private float initialRunSpeed;
@@ -296,8 +299,9 @@ public class PlayerBehaviour : MonoBehaviour
     void Spawn(){
 
         transform.position=spawnPoint.position;
-        speedBoostTimer = 0;
-        jumpBoostTimer = 0;
+        for (int i = 0; i < boosterList.Count; i++) {
+            boosterList[i].SetActive(true);
+        }
     }
 
     public void OnDeath(){
@@ -343,7 +347,9 @@ public class PlayerBehaviour : MonoBehaviour
                 moveSettings.runVelocity *= 1.5f;
             }
             Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
-            Destroy(other.gameObject);
+            boosterList.Add(other.gameObject);
+            other.gameObject.SetActive(false);
+            //Destroy(other.gameObject);
         }
 
         if (other.CompareTag("JumpBoost"))
@@ -356,7 +362,9 @@ public class PlayerBehaviour : MonoBehaviour
                 moveSettings.jumpVelocity *= 1.5f;
             }
             Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
-            Destroy(other.gameObject);
+            boosterList.Add(other.gameObject);
+            other.gameObject.SetActive(false);
+           // Destroy(other.gameObject);
         }
 
         if (other.CompareTag("Collectible"))
@@ -374,7 +382,9 @@ public class PlayerBehaviour : MonoBehaviour
             keyPickup.Play();
             hasKey = true;
             Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
-            Destroy(other.gameObject);
+            boosterList.Add(other.gameObject);
+            other.gameObject.SetActive(false);
+            //Destroy(other.gameObject);
         }
 
         if (other.CompareTag("HealthKit"))
@@ -382,6 +392,7 @@ public class PlayerBehaviour : MonoBehaviour
             healPickup.Play();
             Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
             currentManager.Heal(5);
+            boosterList.Add(other.gameObject);
             Destroy(other.gameObject);
         }
 
