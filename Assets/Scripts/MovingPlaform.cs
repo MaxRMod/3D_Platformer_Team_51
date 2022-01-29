@@ -15,6 +15,8 @@ private Rigidbody rbody;
 
 private float distance=0f;
 
+private float playerVelocity = 0f;
+
 
 private Vector3 offset;
 
@@ -44,13 +46,15 @@ private Vector3 offset;
     }
 
     
-    void OnCollisionEnter(Collision other){
+    void OnTriggerEnter(Collider other){
         other.gameObject.transform.SetParent(gameObject.transform);
-        //other.gameObject.GetComponent<PlayerBehaviour>().moveSettings.runVelocity += this.speed;
+        playerVelocity = other.gameObject.GetComponent<PlayerBehaviour>().moveSettings.runVelocity;
+        other.gameObject.GetComponent<PlayerBehaviour>().moveSettings.runVelocity = 10;
     }
 
-    void OnCollisionExit(Collision exit){
-        exit.gameObject.transform.SetParent(null);    
+    void OnTriggerExit(Collider exit){
+        exit.gameObject.transform.SetParent(null);
+        exit.gameObject.GetComponent<PlayerBehaviour>().moveSettings.runVelocity = playerVelocity;
     }
 
 
