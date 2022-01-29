@@ -41,15 +41,12 @@ private Vector3 offset;
                 currentTarget=currentStart;
                 currentStart=oldTarget;
             }
-
-
-
-
     }
 
     
     void OnCollisionEnter(Collision other){
         other.gameObject.transform.SetParent(gameObject.transform);
+        //other.gameObject.GetComponent<PlayerBehaviour>().moveSettings.runVelocity += this.speed;
     }
 
     void OnCollisionExit(Collision exit){

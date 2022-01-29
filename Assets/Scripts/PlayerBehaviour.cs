@@ -12,7 +12,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     [SerializeField] private Transform spawnPoint;
     private Rigidbody playerRigidbody;
-    private Vector3 velocity;
+    public Vector3 velocity;
     private Quaternion targetRotation;
     private float forwardInput, sidewaysInput, turnInput, jumpInput;
     private Vector3 initialScale;
@@ -107,6 +107,9 @@ public class PlayerBehaviour : MonoBehaviour
     //Called every frame
     void Update()
     {
+
+        //transform.localScale = new Vector3(0.3f,0.3f,0.3f);
+
     	//Cursor.visible = false;
         if(playerRigidbody.velocity.y<0){
             playerRigidbody.velocity+=Vector3.up*Physics.gravity.y*fallDownFaster*Time.deltaTime;
@@ -302,6 +305,7 @@ public class PlayerBehaviour : MonoBehaviour
         for (int i = 0; i < boosterList.Count; i++) {
             boosterList[i].SetActive(true);
         }
+        this.GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
 
     public void OnDeath(){

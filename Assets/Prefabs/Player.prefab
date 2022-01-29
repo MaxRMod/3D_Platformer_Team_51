@@ -102,7 +102,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 8621115136901627094}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -149,6 +149,7 @@ MonoBehaviour:
     TURN_AXIS: Mouse X
     JUMP_AXIS: Jump
   spawnPoint: {fileID: 0}
+  velocity: {x: 0, y: 0, z: 0}
   anim: {fileID: 7666986769416430525}
   MaxJumps: 2
   pickupEffect: {fileID: 6886485282577774253, guid: 7ab0c4102bf4ebf45934ecb76987e675, type: 3}
