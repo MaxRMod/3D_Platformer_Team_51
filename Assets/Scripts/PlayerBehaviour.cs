@@ -296,6 +296,8 @@ public class PlayerBehaviour : MonoBehaviour
     void Spawn(){
 
         transform.position=spawnPoint.position;
+        speedBoostTimer = 0;
+        jumpBoostTimer = 0;
     }
 
     public void OnDeath(){
