@@ -32,17 +32,15 @@ private Vector3 offset;
     // Update is called once per frame
     void Update()
     {
-
-            distance=distance+speed*Time.deltaTime;
-            transform.position=Vector3.Lerp(currentStart.position,currentTarget.position,distance);
-            rbody.MovePosition(Vector3.Lerp(currentStart.position,currentTarget.position,distance));
-            if(distance>1){
-
-                distance=0;
-                Transform oldTarget=currentTarget;
-                currentTarget=currentStart;
-                currentStart=oldTarget;
-            }
+        distance=distance+speed*Time.deltaTime;
+        transform.position=Vector3.Lerp(currentStart.position,currentTarget.position,distance);
+        rbody.MovePosition(Vector3.Lerp(currentStart.position,currentTarget.position,distance));
+        if(distance>1){
+            distance=0;
+            Transform oldTarget=currentTarget;
+            currentTarget=currentStart;
+            currentStart=oldTarget;
+        }
     }
 
     
@@ -52,7 +50,7 @@ private Vector3 offset;
         other.gameObject.GetComponent<PlayerBehaviour>().moveSettings.runVelocity = 10;
     }
 
-    void OnTriggerExit(Collider exit){
+    void OnCollisionExit(Collision exit){
         exit.gameObject.transform.SetParent(null);
         exit.gameObject.GetComponent<PlayerBehaviour>().moveSettings.runVelocity = playerVelocity;
     }
