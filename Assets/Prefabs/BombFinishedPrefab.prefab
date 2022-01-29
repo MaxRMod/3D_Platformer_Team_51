@@ -126,7 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d53bc8542b07640ba3b7469e2aa37c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
   invincible: 0
   bumpSpeed: 10
 --- !u!114 &6959297266600423593
@@ -141,3 +140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34470cc0e33aa9e4fbe12b56f9cbe4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invincible: 0
+  bumpSpeed: 10
+  speed: 2
