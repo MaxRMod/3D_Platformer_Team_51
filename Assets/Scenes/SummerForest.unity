@@ -5350,14 +5350,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthKit
       objectReference: {fileID: 0}
-    - target: {fileID: 3722975168658660635, guid: 2c90d535ff089ef438a81596c907de0f, type: 3}
-      propertyPath: m_TagString
-      value: HealthKit
-      objectReference: {fileID: 0}
-    - target: {fileID: 3828359437197681812, guid: 2c90d535ff089ef438a81596c907de0f, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: ad525ab7a95b61c4a8f4cc6c401d344b, type: 2}
     - target: {fileID: 7955479014322390986, guid: 2c90d535ff089ef438a81596c907de0f, type: 3}
       propertyPath: m_RootOrder
       value: 48

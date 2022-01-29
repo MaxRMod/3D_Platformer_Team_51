@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6221524367006393633}
   m_Layer: 0
   m_Name: HealthKit
-  m_TagString: Untagged
+  m_TagString: HealthKit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,6 +119,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 74bc32a9edfb6e746b04fd1ec0459ccf, type: 2}
+    - target: {fileID: 9500000, guid: d7ad4e1596d1e554ca6e22276e5c5dac, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ad525ab7a95b61c4a8f4cc6c401d344b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7ad4e1596d1e554ca6e22276e5c5dac, type: 3}
 --- !u!4 &3828359437189925748 stripped
