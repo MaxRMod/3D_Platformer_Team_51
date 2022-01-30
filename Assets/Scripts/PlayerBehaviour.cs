@@ -18,6 +18,7 @@ public class PlayerBehaviour : MonoBehaviour
     private Vector3 initialScale;
     public Animator anim;
 
+    public Transform cam;
     //Jump-variables
     private int JumpCount = 0;
     private float fallDownFaster=1f;
@@ -173,6 +174,10 @@ public class PlayerBehaviour : MonoBehaviour
             currentManager.ResetLives();
             Spawn();
         }
+
+        if(sidewaysInput >= 0.1f) {
+            
+        }
     }
 
     //Called every timestep
@@ -223,6 +228,9 @@ public class PlayerBehaviour : MonoBehaviour
         velocity.y = playerRigidbody.velocity.y;
         velocity.z = forwardInput * moveSettings.runVelocity;
         velocity.x = sidewaysInput * moveSettings.runVelocity;
+
+
+        //Vector3 
         playerRigidbody.velocity = transform.TransformDirection(velocity);
         
     }
@@ -231,7 +239,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (Mathf.Abs(turnInput) > 0)
         {
-            targetRotation *= Quaternion.AngleAxis(moveSettings.rotateVelocity * turnInput * Time.deltaTime, Vector3.up);
+            targetRotation = Quaternion.AngleAxis(moveSettings.rotateVelocity * turnInput * Time.deltaTime + cam.eulerAngles.y, Vector3.up);
         }
         transform.rotation = targetRotation;
     }
