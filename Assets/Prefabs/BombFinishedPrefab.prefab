@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d9713c9dc90b17d469c192baeb0d3197, type: 2}
+  - {fileID: 2100000, guid: 37e322977533559438c6b9ad2e68f396, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -142,4 +142,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invincible: 0
   bumpSpeed: 10
+  zAxisMove: 0
   speed: 2
