@@ -50,4 +50,9 @@ public class OpenScene : MonoBehaviour
        EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo();
        EditorSceneManager.OpenScene("Assets/Scenes/Spiellevel.unity");
    }
+    [MenuItem("OpenScene/Sommer")]
+   static void Sommer(){
+       EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo();
+       EditorSceneManager.OpenScene("Assets/Scenes/Sommer.unity");
+   }
 }
