@@ -4,11 +4,17 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class SimpleEnemy : Enemy
 {
-    public float speed;
+
+    [SerializeField] bool zAxisMove=false;
+    public float speed=2;
 
      public void FixedUpdate(){
-        enemyRigidbody.velocity=new Vector3(speed,enemyRigidbody.velocity.y,0);
-
+        if(!zAxisMove){
+            enemyRigidbody.velocity=new Vector3(speed,enemyRigidbody.velocity.y,0);
+        }
+        else{
+            enemyRigidbody.velocity=new Vector3(0,enemyRigidbody.velocity.y,speed);
+        }
     }
 
     public void OnTriggerEnter(Collider other){
