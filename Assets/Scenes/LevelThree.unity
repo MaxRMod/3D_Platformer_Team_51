@@ -10165,9 +10165,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1135005020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44bca029d2f9f264ab00bdbd953a1c96, type: 3}
+  m_Script: {fileID: 11500000, guid: c80eb6ef4b6198e49a30c93e17def4a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1001 &1140223194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16555,6 +16556,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8911625312790419918, guid: 7231d875a62d9e34fb618ec326e84ac9, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8911625312790419919, guid: 7231d875a62d9e34fb618ec326e84ac9, type: 3}
       propertyPath: m_Name
       value: BombFinishedPrefab (5)
@@ -16626,12 +16631,36 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1254973022, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
+      propertyPath: m_Size.x
+      value: 1.3000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254973022, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.87716675
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254973022, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254973022, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
+      propertyPath: m_Center.y
+      value: 0.5614166
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472845396, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
+      propertyPath: m_Size.x
+      value: 1.3000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472845396, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
+      propertyPath: m_Size.y
+      value: 1.9764713
       objectReference: {fileID: 0}
     - target: {fileID: 1472845396, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472845396, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
+      propertyPath: m_Center.y
+      value: -0.21176437
       objectReference: {fileID: 0}
     - target: {fileID: 6783630004127455624, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
       propertyPath: healthText
