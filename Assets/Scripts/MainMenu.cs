@@ -28,7 +28,7 @@ public class MainMenu: MonoBehaviour
     public void PlayGame()
     {
         resetStats();
-        SceneManager.LoadScene("Spiellevel");
+        SceneManager.LoadScene("LevelOne");
     }
 
     //Exit Game
