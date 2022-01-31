@@ -18,6 +18,7 @@ TagManager:
   - Portal1
   - Portal2
   - HealthKit
+  - No Camera Zoom
   layers:
   - Default
   - TransparentFX

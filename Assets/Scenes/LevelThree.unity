@@ -2178,7 +2178,7 @@ GameObject:
   - component: {fileID: 149282676}
   m_Layer: 0
   m_Name: Collider (3)
-  m_TagString: Untagged
+  m_TagString: No Camera Zoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3000,7 +3000,7 @@ PrefabInstance:
     - target: {fileID: 3743597652272602288, guid: 752c5ab2b07e26d49b8ffa4bfe3363e3, type: 3}
       propertyPath: teleportPoint
       value: 
-      objectReference: {fileID: 1401145637}
+      objectReference: {fileID: 34239462}
     - target: {fileID: 4689652966857859005, guid: 752c5ab2b07e26d49b8ffa4bfe3363e3, type: 3}
       propertyPath: m_Name
       value: Portal 2 (1)
@@ -3497,7 +3497,7 @@ GameObject:
   - component: {fileID: 223232536}
   m_Layer: 0
   m_Name: Collider (1)
-  m_TagString: Untagged
+  m_TagString: No Camera Zoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7109,31 +7109,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1152778040596528911, guid: 399777bed50a4204a864652f24b7f7e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.0681666
+      value: -1.0681418
       objectReference: {fileID: 0}
     - target: {fileID: 1152778040596528911, guid: 399777bed50a4204a864652f24b7f7e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.3040032
+      value: 4.304
       objectReference: {fileID: 0}
     - target: {fileID: 1152778040596528911, guid: 399777bed50a4204a864652f24b7f7e6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.9600002
+      value: -2.98
       objectReference: {fileID: 0}
     - target: {fileID: 1152778040596528911, guid: 399777bed50a4204a864652f24b7f7e6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9919763
+      value: 0.99454653
       objectReference: {fileID: 0}
     - target: {fileID: 1152778040596528911, guid: 399777bed50a4204a864652f24b7f7e6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.12642406
+      value: 0.104294084
       objectReference: {fileID: 0}
     - target: {fileID: 1152778040596528911, guid: 399777bed50a4204a864652f24b7f7e6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000023266891
+      value: -2.994567e-10
       objectReference: {fileID: 0}
     - target: {fileID: 1152778040596528911, guid: 399777bed50a4204a864652f24b7f7e6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00000029646895
+      value: -3.140898e-11
       objectReference: {fileID: 0}
     - target: {fileID: 1152778040596528911, guid: 399777bed50a4204a864652f24b7f7e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8164,7 +8164,7 @@ GameObject:
   - component: {fileID: 472624561}
   m_Layer: 0
   m_Name: Collider (2)
-  m_TagString: Untagged
+  m_TagString: No Camera Zoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10731,7 +10731,7 @@ GameObject:
   - component: {fileID: 591104148}
   m_Layer: 0
   m_Name: Collider (6)
-  m_TagString: Untagged
+  m_TagString: No Camera Zoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20758,7 +20758,7 @@ GameObject:
   - component: {fileID: 1187704326}
   m_Layer: 0
   m_Name: Collider (4)
-  m_TagString: Untagged
+  m_TagString: No Camera Zoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25146,7 +25146,7 @@ PrefabInstance:
     - target: {fileID: 3743597652355910753, guid: 5d9859b001511cb41a03ef67f5fd6f17, type: 3}
       propertyPath: teleportPoint
       value: 
-      objectReference: {fileID: 34239462}
+      objectReference: {fileID: 1401145637}
     - target: {fileID: 4638952793353904733, guid: 5d9859b001511cb41a03ef67f5fd6f17, type: 3}
       propertyPath: m_Name
       value: Portal 1
@@ -25755,15 +25755,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3987035174790576603, guid: a3e81277cc000774c96d5123598247ee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.08
+      value: -44.61
       objectReference: {fileID: 0}
     - target: {fileID: 3987035174790576603, guid: a3e81277cc000774c96d5123598247ee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.51
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 3987035174790576603, guid: a3e81277cc000774c96d5123598247ee, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.94
+      value: 126.78
       objectReference: {fileID: 0}
     - target: {fileID: 3987035174790576603, guid: a3e81277cc000774c96d5123598247ee, type: 3}
       propertyPath: m_LocalRotation.w
@@ -27092,7 +27092,7 @@ GameObject:
   - component: {fileID: 1531276345}
   m_Layer: 0
   m_Name: Collider (5)
-  m_TagString: Untagged
+  m_TagString: No Camera Zoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27135,10 +27135,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1988076813}
-    - target: {fileID: 7674236786320387955, guid: 49cda888578e94742a44f98f6805c897, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResumeFromPause
-      objectReference: {fileID: 0}
     - target: {fileID: 7674236786486045632, guid: 49cda888578e94742a44f98f6805c897, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -27227,22 +27223,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7674236786603265574, guid: 49cda888578e94742a44f98f6805c897, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 1f01c242845a57343b05987777490214, type: 3}
-    - target: {fileID: 7674236787203655479, guid: 49cda888578e94742a44f98f6805c897, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 1f01c242845a57343b05987777490214, type: 3}
     - target: {fileID: 7674236787953051394, guid: 49cda888578e94742a44f98f6805c897, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1988076813}
-    - target: {fileID: 7674236787953051394, guid: 49cda888578e94742a44f98f6805c897, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadLevelByName
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49cda888578e94742a44f98f6805c897, type: 3}
 --- !u!114 &1532435642 stripped
@@ -49517,35 +49501,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8894373887294810238, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9895126
+      value: 0.9924849
       objectReference: {fileID: 0}
     - target: {fileID: 8894373887294810238, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.14444666
+      value: 0.12236714
       objectReference: {fileID: 0}
     - target: {fileID: 8894373887294810238, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000023016407
+      value: 0.000000032243133
       objectReference: {fileID: 0}
     - target: {fileID: 8894373887294810238, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00000033598792
+      value: -0.000000003975375
       objectReference: {fileID: 0}
     - target: {fileID: 8894373887543099334, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9919763
+      value: 0.99454653
       objectReference: {fileID: 0}
     - target: {fileID: 8894373887543099334, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.12642403
+      value: 0.104294084
       objectReference: {fileID: 0}
     - target: {fileID: 8894373887543099334, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000023264545
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8894373887543099334, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000002964988
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8894373888271698064, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_RootOrder
@@ -49615,25 +49599,29 @@ PrefabInstance:
       propertyPath: m_RecenterToTargetHeading.m_enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8894373888271698067, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
+      propertyPath: m_IgnoreTag
+      value: No Camera Zoom
+      objectReference: {fileID: 0}
     - target: {fileID: 8894373888271698078, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_Name
       value: Third Person Camera
       objectReference: {fileID: 0}
     - target: {fileID: 8894373888782914599, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9941066
+      value: 0.9962749
       objectReference: {fileID: 0}
     - target: {fileID: 8894373888782914599, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.10840733
+      value: 0.0862344
       objectReference: {fileID: 0}
     - target: {fileID: 8894373888782914599, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000002320879
+      value: 0.0000000042855715
       objectReference: {fileID: 0}
     - target: {fileID: 8894373888782914599, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000002530919
+      value: -3.7094544e-10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}

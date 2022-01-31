@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3990329485429637943}
   m_Layer: 0
   m_Name: Pine_Snowy2
-  m_TagString: Untagged
+  m_TagString: No Camera Zoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

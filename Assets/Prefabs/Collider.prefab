@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1671080617188357049}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: No Camera Zoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
