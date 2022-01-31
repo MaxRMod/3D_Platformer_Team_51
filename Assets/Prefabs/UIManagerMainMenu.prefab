@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3312073357805793326}
-  - component: {fileID: 3312073357805793325}
+  - component: {fileID: 398691264}
   m_Layer: 0
   m_Name: UIManagerMainMenu
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3312073357805793325
+--- !u!114 &398691264
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,6 +40,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3312073357805793324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb290ec6ffb07e2418865426309888ef, type: 3}
+  m_Script: {fileID: 11500000, guid: d9a1aacf1420f2941b6c45be770e2992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pausePanel: {fileID: 0}
