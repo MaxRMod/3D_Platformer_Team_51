@@ -27,6 +27,7 @@ public class UIManagerForGame : MonoBehaviour
         pausePanel.SetActive(false);
         Time.timeScale=1;
         isPaused=false;
+        Cursor.visible=false;
 
     }
     // Start is called before the first frame update
@@ -43,6 +44,7 @@ public class UIManagerForGame : MonoBehaviour
             Time.timeScale=0;
             pausePanel.SetActive(true);
             isPaused=true;
+            Cursor.visible=true;
        
         }
 
