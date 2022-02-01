@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerBehaviour : MonoBehaviour
@@ -93,6 +94,9 @@ public class PlayerBehaviour : MonoBehaviour
         jumpBoosted = false;
         speedBoostTimer = 0;
         JumpCount = MaxJumps;
+        if (SceneManager.GetActiveScene().buildIndex == 1) {
+            GameData.Instance.Coins = 0;
+        }
         collectibleCounter = GameData.Instance.Coins;
         //collectibleText = GameObject.Find("collectibleText").GetComponent<Text>();
         stepped = false;
