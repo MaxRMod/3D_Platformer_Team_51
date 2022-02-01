@@ -310,8 +310,6 @@ public class PlayerBehaviour : MonoBehaviour
     void Spawn(){
         //this.gameObject.transform.SetParent(spawnPoint);
         transform.position=spawnPoint.position;
-        this.speedBoosted = false;
-        this.jumpBoosted = false;
         for (int i = 0; i < boosterList.Count; i++) {
             boosterList[i].SetActive(true);
         }
