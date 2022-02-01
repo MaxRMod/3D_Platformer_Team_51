@@ -170,7 +170,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         lives = currentManager.currentLives;
 
-        if (lives == 0) {
+        if (lives <= 0) {
             currentManager.ResetLives();
             Spawn();
         }
@@ -309,6 +309,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Spawn(){
         //this.gameObject.transform.SetParent(spawnPoint);
+        currentManager.ResetLives();
         transform.position=spawnPoint.position;
         if (speedBoosted) {
             speedBoostTimer = 6;
