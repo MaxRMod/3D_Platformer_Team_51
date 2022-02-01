@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 4257419393150483255}
   - component: {fileID: 2034837133252110198}
   - component: {fileID: 2161591078657462114}
+  - component: {fileID: 1874026281394571950}
   m_Layer: 0
   m_Name: Key Pickup
   m_TagString: Key
@@ -161,3 +162,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 95
+--- !u!114 &1874026281394571950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8733693733424626931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddec31028367abf4aa79953dd96128fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

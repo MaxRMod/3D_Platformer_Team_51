@@ -1,7 +1,8 @@
 public sealed class GameData 
 {
     private static GameData instance;
-    private int score=0;
+    private int coins;
+     private int score;
 
     private GameData(){
             if(instance != null)
@@ -22,24 +23,30 @@ public sealed class GameData
 
     }
 
-    public int Score{
+    public int Coins{
 
         get
         {
-            return score;
+            return coins;
         }
         set
         {
-            score = value;
+            coins = value;
         }
     
     }
 
-    public int Lives{
-
-        get;
+    public int Score{
         
-        set;
+        get
+        {
+            return score;
+        }
+        
+        set
+        {
+            score = value;
+        }
         
     
     }

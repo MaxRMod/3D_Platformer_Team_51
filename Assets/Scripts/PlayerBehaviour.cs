@@ -75,6 +75,7 @@ public class PlayerBehaviour : MonoBehaviour
     void Awake()
     {
         Spawn();
+        Cursor.visible = false;
         velocity = Vector3.zero;
         forwardInput = sidewaysInput = turnInput = jumpInput = 0;
         targetRotation = transform.rotation;
@@ -90,7 +91,7 @@ public class PlayerBehaviour : MonoBehaviour
         jumpBoosted = false;
         speedBoostTimer = 0;
         JumpCount = MaxJumps;
-        collectibleCounter = 0;
+        collectibleCounter = GameData.Instance.Coins;
         //collectibleText = GameObject.Find("collectibleText").GetComponent<Text>();
         stepped = false;
         runSoundTimer = 0;
@@ -109,9 +110,6 @@ public class PlayerBehaviour : MonoBehaviour
     void Update()
     {
 
-        //transform.localScale = new Vector3(0.3f,0.3f,0.3f);
-
-    	//Cursor.visible = false;
         if(playerRigidbody.velocity.y<0){
             playerRigidbody.velocity+=Vector3.up*Physics.gravity.y*fallDownFaster*Time.deltaTime;
         }
@@ -310,6 +308,8 @@ public class PlayerBehaviour : MonoBehaviour
     void Spawn(){
         //this.gameObject.transform.SetParent(spawnPoint);
         transform.position=spawnPoint.position;
+        this.speedBoosted = false;
+        this.jumpBoosted = false;
         for (int i = 0; i < boosterList.Count; i++) {
             boosterList[i].SetActive(true);
         }
@@ -383,6 +383,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             coinPickup.Play();
             collectibleCounter++;
+            GameData.Instance.Coins++;
             collectibleText.text = "Coins: " + collectibleCounter;
             Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
