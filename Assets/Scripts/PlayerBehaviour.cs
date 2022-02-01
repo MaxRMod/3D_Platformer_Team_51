@@ -310,6 +310,12 @@ public class PlayerBehaviour : MonoBehaviour
     void Spawn(){
         //this.gameObject.transform.SetParent(spawnPoint);
         transform.position=spawnPoint.position;
+        if (speedBoosted) {
+            speedBoostTimer = 6;
+        }
+        if (jumpBoosted) {
+            jumpBoostTimer = 6;
+        }
         for (int i = 0; i < boosterList.Count; i++) {
             boosterList[i].SetActive(true);
         }
