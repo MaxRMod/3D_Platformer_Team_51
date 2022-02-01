@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1137866620237152323}
   m_Layer: 0
   m_Name: Tree2
-  m_TagString: Untagged
+  m_TagString: No Camera Zoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
