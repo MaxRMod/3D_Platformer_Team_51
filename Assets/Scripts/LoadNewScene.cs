@@ -8,6 +8,9 @@ public class LoadNewScene : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
             int index = SceneManager.GetActiveScene().buildIndex;
+            if (index == 0) {
+                GameData.Instance.Coins = 0;
+            }
             if (index == 4) {
                 Cursor.visible = true;
                 SceneManager.LoadScene(0);

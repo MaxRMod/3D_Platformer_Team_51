@@ -274,37 +274,31 @@ public class PlayerBehaviour : MonoBehaviour
     void OnCollisionEnter(Collision collision){
 
         if(collision.gameObject.CompareTag("Enemy")){
-                Enemy enemy=collision.gameObject.GetComponent<Enemy>();
-                Collider col=collision.gameObject.GetComponent<Collider>();
-                Collider mycol=this.gameObject.GetComponent<Collider>();
+            Enemy enemy=collision.gameObject.GetComponent<Enemy>();
+            Collider col=collision.gameObject.GetComponent<Collider>();
+            Collider mycol=this.gameObject.GetComponent<Collider>();
 
                
-               //TODO
-               //Nochmal PDF angucken und Code überarbeiten, sonst gibt es hier ein Problem  mit bumpSpeed
-                if(enemy.invincible)
-                {
-                    OnDeath();
-                }
-                else if(mycol.bounds.center.y-mycol.bounds.extents.y>col.bounds.center.y+0.5f*col.bounds.extents.y)
-                {
-                    GameData.Instance.Score+=10;
-                    JumpedOnEnemy(enemy.bumpSpeed);
-                    enemy.OnDeath();
-                }
-                else
-                {
-                    OnDeath();
-                }
+           //TODO
+           //Nochmal PDF angucken und Code überarbeiten, sonst gibt es hier ein Problem  mit bumpSpeed
+            if(enemy.invincible)
+            {
+                OnDeath();
+            }
+            else if(mycol.bounds.center.y-mycol.bounds.extents.y>col.bounds.center.y+0.5f*col.bounds.extents.y)
+            {
+                GameData.Instance.Score+=10;
+                JumpedOnEnemy(enemy.bumpSpeed);
+                enemy.OnDeath();
+            }
+            else
+            {
+                 OnDeath();
+           }
                 
                 
         }
 
-    
-
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("MovingPlatform"))
-        {
-            JumpCount = MaxJumps;
-        }
     }
 
     void Spawn(){
@@ -324,7 +318,6 @@ public class PlayerBehaviour : MonoBehaviour
     }
 
     public void OnDeath(){
-
         Spawn();
     }
 
