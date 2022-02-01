@@ -46,6 +46,8 @@ public class PlayerBehaviour : MonoBehaviour
     private int collectibleCounter;
     public Text collectibleText;
 
+    public Text achievementText;
+
     //KeyItem variables
     private bool hasKey;
 
@@ -173,8 +175,8 @@ public class PlayerBehaviour : MonoBehaviour
             Spawn();
         }
 
-        if(sidewaysInput >= 0.1f) {
-            
+        if (collectibleCounter == 60) {
+            achievementText.text = "You've collected all coins!";
         }
     }
 
@@ -308,8 +310,6 @@ public class PlayerBehaviour : MonoBehaviour
     void Spawn(){
         //this.gameObject.transform.SetParent(spawnPoint);
         transform.position=spawnPoint.position;
-        this.speedBoosted = false;
-        this.jumpBoosted = false;
         for (int i = 0; i < boosterList.Count; i++) {
             boosterList[i].SetActive(true);
         }
