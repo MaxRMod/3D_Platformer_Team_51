@@ -93,7 +93,7 @@ public class PlayerBehaviour : MonoBehaviour
         speedBoostTimer = 0;
         jumpBoosted = false;
         speedBoostTimer = 0;
-        JumpCount = MaxJumps;
+        JumpCount = 0;
         if (SceneManager.GetActiveScene().buildIndex == 1) {
             GameData.Instance.Coins = 0;
         }
@@ -188,22 +188,8 @@ public class PlayerBehaviour : MonoBehaviour
     void FixedUpdate()
     {
         Run();
-        if (Input.GetButton("Jump"))
-        {
-            if (JumpCount > 0)
-            {
-                Jump();
-            }
-        }
+        Jump();
     }
-
-    /*private void Step() {
-        audioSource.PlayOneShot(GetRandomClip());
-    }
-
-    private AudioClip GetRandomClip() {
-        return clips[UnityEngine.Random.Range(0, clips.Length)];
-    }*/
 
     #region PlayerMovement
     //Saves user input
