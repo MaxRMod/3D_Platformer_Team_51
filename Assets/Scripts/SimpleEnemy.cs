@@ -21,4 +21,5 @@ public class SimpleEnemy : Enemy
         if(other.CompareTag("End"))
         speed *= -1;
     }
+
 }
