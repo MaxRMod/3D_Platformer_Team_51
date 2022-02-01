@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6959297266600423593}
   m_Layer: 6
   m_Name: BombFinishedPrefab
-  m_TagString: Enemy
+  m_TagString: Bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,4 +143,4 @@ MonoBehaviour:
   invincible: 0
   bumpSpeed: 10
   zAxisMove: 0
-  speed: 2
+  speed: -2

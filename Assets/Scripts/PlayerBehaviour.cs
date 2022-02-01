@@ -26,9 +26,9 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private int MaxJumps = 2; //Maximum amount of jumps
 
     Rigidbody platformRigidbody;
-    
 
     public GameObject pickupEffect;
+    public GameObject explosion;
 
     //SpeedBoost variables
 
@@ -278,6 +278,7 @@ public class PlayerBehaviour : MonoBehaviour
     void OnCollisionEnter(Collision collision){
 
         if(collision.gameObject.CompareTag("Enemy")){
+            currentManager.damageSound.Play();
             Enemy enemy=collision.gameObject.GetComponent<Enemy>();
             Collider col=collision.gameObject.GetComponent<Collider>();
             Collider mycol=this.gameObject.GetComponent<Collider>();
@@ -297,8 +298,36 @@ public class PlayerBehaviour : MonoBehaviour
             }
             else
             {
-                 OnDeath();
-           }
+                OnDeath();
+            }
+                
+                
+        }
+
+        if(collision.gameObject.CompareTag("Bomb")){
+            currentManager.damageSound.Play();
+            //Instantiate(explosion, collision.transform.position, collision.transform.rotation);
+            Enemy enemy=collision.gameObject.GetComponent<Enemy>();
+            Collider col=collision.gameObject.GetComponent<Collider>();
+            Collider mycol=this.gameObject.GetComponent<Collider>();
+
+               
+           //TODO
+           //Nochmal PDF angucken und Code überarbeiten, sonst gibt es hier ein Problem  mit bumpSpeed
+            if(enemy.invincible)
+            {
+                OnDeath();
+            }
+            else if(mycol.bounds.center.y-mycol.bounds.extents.y>col.bounds.center.y+0.5f*col.bounds.extents.y)
+            {
+                GameData.Instance.Score+=10;
+                JumpedOnEnemy(enemy.bumpSpeed);
+                enemy.OnDeath();
+            }
+            else
+            {
+                OnDeath();
+            }
                 
                 
         }
