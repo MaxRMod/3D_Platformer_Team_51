@@ -20,10 +20,12 @@ public class HurtPlayer : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other) 
+    private void OnCollisionEnter(Collision other)
     {
-        if(other.CompareTag("Player")) {
+        if (other.gameObject.CompareTag("Player"))
+        {
             FindObjectOfType<HealthManager>().TakeDamage(damage);
+            Debug.Log(other.gameObject.name);
         }
     }
 }

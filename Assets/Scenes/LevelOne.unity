@@ -7124,6 +7124,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5105283193002147787, guid: 9a672b7074f194441af8154db3b1fe84, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6156103541119446993, guid: 9a672b7074f194441af8154db3b1fe84, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -8204,6 +8208,10 @@ PrefabInstance:
       value: 2.0925732
       objectReference: {fileID: 0}
     - target: {fileID: 1472845396, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472845396, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
       propertyPath: m_Center.z
       value: -0.10371451
       objectReference: {fileID: 0}
@@ -8215,10 +8223,18 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 24300002, guid: a6850521862f348fab45b557b7860d88, type: 2}
+    - target: {fileID: 4020983981207069565, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4286206837518839480, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 24300002, guid: a6850521862f348fab45b557b7860d88, type: 2}
+    - target: {fileID: 4361374555312388551, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.099
+      objectReference: {fileID: 0}
     - target: {fileID: 4431224813776287425, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
@@ -8239,6 +8255,10 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 645088218}
+    - target: {fileID: 8621115136901627081, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8621115136901627084, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -8285,6 +8305,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8621115136901627094, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8621115136901627094, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8621115136901627095, guid: c1ba3bdaba2c09f4f996e4d3f28a684a, type: 3}
@@ -9069,6 +9093,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5105283193002147787, guid: 9a672b7074f194441af8154db3b1fe84, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5105283193002147787, guid: 9a672b7074f194441af8154db3b1fe84, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5105283193002147787, guid: 9a672b7074f194441af8154db3b1fe84, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6156103541119446993, guid: 9a672b7074f194441af8154db3b1fe84, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -9116,6 +9152,14 @@ PrefabInstance:
     - target: {fileID: 7148767683409092034, guid: 9a672b7074f194441af8154db3b1fe84, type: 3}
       propertyPath: m_Name
       value: Cactus1 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172669066728926, guid: 9a672b7074f194441af8154db3b1fe84, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172669066728926, guid: 9a672b7074f194441af8154db3b1fe84, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a672b7074f194441af8154db3b1fe84, type: 3}
