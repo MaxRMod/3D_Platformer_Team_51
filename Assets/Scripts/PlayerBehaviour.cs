@@ -72,6 +72,8 @@ public class PlayerBehaviour : MonoBehaviour
     public AudioSource audioSource;
     private bool stepped;
 
+    public float gravityCounter = 0;
+
     
 
     //Set all starting values
@@ -115,9 +117,14 @@ public class PlayerBehaviour : MonoBehaviour
     //Called every frame
     void Update()
     {
-
         if(playerRigidbody.velocity.y<0){
-            playerRigidbody.velocity+=Vector3.up*Physics.gravity.y*fallDownFaster*Time.deltaTime;
+            gravityCounter += Time.deltaTime;
+            if (gravityCounter < 0.5) {
+                playerRigidbody.velocity+=Vector3.up*Physics.gravity.y*fallDownFaster*Time.deltaTime;
+            }
+        }
+        if (gravityCounter >= 0.5) {
+            gravityCounter = 0;
         }
         Turn();
         GetInput();
@@ -276,7 +283,7 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 OnDeath();
             }
-            else if(playerCol.bounds.center.y-playerCol.bounds.extents.y>enemyCol.bounds.center.y+0.9f*enemyCol.bounds.extents.y)
+            else if(playerCol.bounds.center.y-playerCol.bounds.extents.y>enemyCol.bounds.center.y+enemyCol.bounds.extents.y)
             {
                 
                 GameData.Instance.Score+=10;
