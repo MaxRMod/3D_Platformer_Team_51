@@ -63,6 +63,18 @@ MonoBehaviour:
     m_Key: Lives (GAME)
     m_Metadata:
       m_Items: []
+  - m_Id: 3409976138653696
+    m_Key: WASD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3410023576231936
+    m_Key: SPACE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3410039313260544
+    m_Key: ESCAPE
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
