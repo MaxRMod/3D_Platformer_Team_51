@@ -266,8 +266,8 @@ public class PlayerBehaviour : MonoBehaviour
         if(collision.gameObject.CompareTag("Enemy")){
             currentManager.damageSound.Play();
             Enemy enemy=collision.gameObject.GetComponent<Enemy>();
-            Collider col=collision.gameObject.GetComponent<Collider>();
-            Collider mycol=this.gameObject.GetComponent<Collider>();
+            Collider enemyCol=collision.gameObject.GetComponent<Collider>();
+            Collider playerCol=this.gameObject.GetComponent<Collider>();
 
                
            //TODO
@@ -276,8 +276,9 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 OnDeath();
             }
-            else if(mycol.bounds.center.y-mycol.bounds.extents.y>col.bounds.center.y+0.5f*col.bounds.extents.y)
+            else if(playerCol.bounds.center.y-playerCol.bounds.extents.y>enemyCol.bounds.center.y+0.9f*enemyCol.bounds.extents.y)
             {
+                
                 GameData.Instance.Score+=10;
                 JumpedOnEnemy(enemy.bumpSpeed);
                 enemy.OnDeath();

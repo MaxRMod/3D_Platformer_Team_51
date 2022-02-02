@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
     public void OnDeath(){
 
         gameObject.GetComponent<Collider>().enabled=false;
-        //gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
 }
