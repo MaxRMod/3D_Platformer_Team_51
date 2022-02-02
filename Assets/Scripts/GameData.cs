@@ -2,7 +2,9 @@ public sealed class GameData
 {
     private static GameData instance;
     private int coins;
-     private int score;
+    private int score;
+
+    private float sliderValue;
 
     private GameData(){
             if(instance != null)
@@ -32,6 +34,19 @@ public sealed class GameData
         set
         {
             coins = value;
+        }
+    
+    }
+
+    public float SliderValue{
+
+        get
+        {
+            return sliderValue;
+        }
+        set
+        {
+            sliderValue = value;
         }
     
     }

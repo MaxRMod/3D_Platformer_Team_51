@@ -732,6 +732,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadLevelByName
       objectReference: {fileID: 0}
+    - target: {fileID: 8531927231856092976, guid: 49cda888578e94742a44f98f6805c897, type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 227159836}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49cda888578e94742a44f98f6805c897, type: 3}
 --- !u!1 &119806488
@@ -1152,6 +1156,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 958152b8e73955d4593bd72b8aa0f57c, type: 3}
+--- !u!114 &227159836 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3219465305695943, guid: 49cda888578e94742a44f98f6805c897, type: 3}
+  m_PrefabInstance: {fileID: 95914379}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &228646933
 PrefabInstance:
   m_ObjectHideFlags: 0

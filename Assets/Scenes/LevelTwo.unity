@@ -32448,8 +32448,23 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadLevelByName
       objectReference: {fileID: 0}
+    - target: {fileID: 8531927231856092976, guid: 49cda888578e94742a44f98f6805c897, type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 1075141799}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49cda888578e94742a44f98f6805c897, type: 3}
+--- !u!114 &1075141799 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3219465305695943, guid: 49cda888578e94742a44f98f6805c897, type: 3}
+  m_PrefabInstance: {fileID: 1075141798}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1079558658 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7674236786603265574, guid: 49cda888578e94742a44f98f6805c897, type: 3}
@@ -36457,15 +36472,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8894373887294810238, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.12236711
+      value: 0.12236713
       objectReference: {fileID: 0}
     - target: {fileID: 8894373887294810238, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000016179959
+      value: 0.000000020635666
       objectReference: {fileID: 0}
     - target: {fileID: 8894373887294810238, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000019948865
+      value: -0.0000000025442473
       objectReference: {fileID: 0}
     - target: {fileID: 8894373887543099334, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_LocalRotation.w
