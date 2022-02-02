@@ -179,7 +179,7 @@ public class PlayerBehaviour : MonoBehaviour
             Spawn();
         }
 
-        if (collectibleCounter == 60) {
+        if (collectibleCounter == 70) {
             achievementText.text = "You've collected all coins!";
         }
     }
