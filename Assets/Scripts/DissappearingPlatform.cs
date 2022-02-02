@@ -19,13 +19,13 @@ public class DissappearingPlatform : MonoBehaviour
     void Update()
     {
         activeTimer += Time.deltaTime;
-        if(activeTimer >= 2 && !isActive)
+        if(activeTimer >= 3 && !isActive)
         {
            platform.SetActive(true);
            activeTimer = 0;
            isActive = true;
         }
-        if (activeTimer >= 1 && isActive) 
+        if (activeTimer >= 2 && isActive) 
         {
             platform.SetActive(false);
             activeTimer = 0;
