@@ -1193,6 +1193,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: naturePack_119
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 958152b8e73955d4593bd72b8aa0f57c, type: 3}
+      propertyPath: m_TagString
+      value: No Camera Zoom
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 958152b8e73955d4593bd72b8aa0f57c, type: 3}
       propertyPath: m_RootOrder
       value: 55
@@ -4239,11 +4243,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1152778040596528911, guid: 399777bed50a4204a864652f24b7f7e6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000004286071
+      value: 0.000000004286071
       objectReference: {fileID: 0}
     - target: {fileID: 1152778040596528911, guid: 399777bed50a4204a864652f24b7f7e6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 4.4779275e-10
+      value: -4.4779275e-10
       objectReference: {fileID: 0}
     - target: {fileID: 1152778040596528911, guid: 399777bed50a4204a864652f24b7f7e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5576,11 +5580,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8894373887543099334, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000004278137
+      value: 0.000000004278137
       objectReference: {fileID: 0}
     - target: {fileID: 8894373887543099334, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 4.4863105e-10
+      value: -4.4863105e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8894373888271698064, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_RootOrder
@@ -5637,6 +5641,10 @@ PrefabInstance:
     - target: {fileID: 8894373888271698065, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_YAxis.m_InvertInput
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894373888271698067, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
+      propertyPath: m_IgnoreTag
+      value: No Camera Zoom
       objectReference: {fileID: 0}
     - target: {fileID: 8894373888271698078, guid: 442b72172a560ce4dae9f229ee14f949, type: 3}
       propertyPath: m_Name
@@ -6268,6 +6276,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: naturePack_119 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 958152b8e73955d4593bd72b8aa0f57c, type: 3}
+      propertyPath: m_TagString
+      value: No Camera Zoom
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 958152b8e73955d4593bd72b8aa0f57c, type: 3}
       propertyPath: m_RootOrder
       value: 58
@@ -6556,6 +6568,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 958152b8e73955d4593bd72b8aa0f57c, type: 3}
       propertyPath: m_Name
       value: naturePack_119 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 958152b8e73955d4593bd72b8aa0f57c, type: 3}
+      propertyPath: m_TagString
+      value: No Camera Zoom
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 958152b8e73955d4593bd72b8aa0f57c, type: 3}
       propertyPath: m_RootOrder
@@ -10186,6 +10202,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 958152b8e73955d4593bd72b8aa0f57c, type: 3}
       propertyPath: m_Name
       value: naturePack_119 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 958152b8e73955d4593bd72b8aa0f57c, type: 3}
+      propertyPath: m_TagString
+      value: No Camera Zoom
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 958152b8e73955d4593bd72b8aa0f57c, type: 3}
       propertyPath: m_RootOrder

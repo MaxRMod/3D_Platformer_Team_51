@@ -4893,7 +4893,7 @@ GameObject:
   - component: {fileID: 3743597652355910753}
   m_Layer: 0
   m_Name: Portal 1
-  m_TagString: Portal1
+  m_TagString: No Camera Zoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4976,6 +4976,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linkedPortal: {fileID: 0}
+  teleportPoint: {fileID: 0}
+  rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5182643191569511876
 GameObject:
   m_ObjectHideFlags: 0

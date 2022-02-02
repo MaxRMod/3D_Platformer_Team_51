@@ -26,16 +26,12 @@ public class Portals : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Vector3 eulerRotation = new Vector3(other.transform.eulerAngles.x, linkedPortal.transform.eulerAngles.y, other.transform.eulerAngles.z);
-            if (gameObject.CompareTag("Portal2")) {
+            
                 //other.transform.position = new Vector3(linkedPortal.transform.position.x + 0.4f, linkedPortal.transform.position.y + 0.45f, linkedPortal.transform.position.z + 0.4f);
-                GameObject point = linkedPortal.GetComponent<Portals>().teleportPoint;
-                other.transform.position = new Vector3(point.transform.position.x, point.transform.position.y, point.transform.position.z);
-                other.transform.rotation = Quaternion.Euler(eulerRotation);
-            } else if (gameObject.CompareTag("Portal1")) {
-                GameObject point = linkedPortal.GetComponent<Portals>().teleportPoint;
-                other.transform.position = new Vector3(point.transform.position.x, point.transform.position.y, point.transform.position.z);
-                 other.transform.rotation = Quaternion.Euler(eulerRotation);
-            }
+            GameObject point = linkedPortal.GetComponent<Portals>().teleportPoint;
+            other.transform.position = new Vector3(point.transform.position.x, point.transform.position.y, point.transform.position.z);
+            other.transform.rotation = Quaternion.Euler(eulerRotation);
+            
         }
     }
 }
