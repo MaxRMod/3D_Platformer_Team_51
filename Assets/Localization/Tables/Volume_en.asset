@@ -66,5 +66,17 @@ MonoBehaviour:
     m_Localized: 'Lives:'
     m_Metadata:
       m_Items: []
+  - m_Id: 3409976138653696
+    m_Localized: W/A/S/D  -  Movement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3410023576231936
+    m_Localized: SPACE  -  Jump
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3410039313260544
+    m_Localized: ESC  -  Pause
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

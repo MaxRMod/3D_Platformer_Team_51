@@ -66,5 +66,17 @@ MonoBehaviour:
     m_Localized: "\u017Bycia:"
     m_Metadata:
       m_Items: []
+  - m_Id: 3410023576231936
+    m_Localized: SPACJA  -  Skok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3410039313260544
+    m_Localized: ESC  -  Pauza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3409976138653696
+    m_Localized: "W/S/A/D  -  Poruszanie si\u0119"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
